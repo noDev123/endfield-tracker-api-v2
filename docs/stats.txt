@@ -1,7 +1,7 @@
 [Standard Headhunting]
-  Total Users    : 1684
-  Total Pulls    : 178929
-  Oroberyl Spent : 89464500
+  Total Users    : 1691
+  Total Pulls    : 179687
+  Oroberyl Spent : 89843500
 
   6-Star
     Rate         : N/A
