@@ -12,37 +12,36 @@ def scrape():
         page = browser.new_page()
         page.goto(
             "https://goyfield.moe/records/global",
-            wait_until="domcontentloaded",
+            wait_until="networkidle",
             timeout=60000
         )
         page.wait_for_timeout(8000)
 
-        # Click the Standard Headhunting tab
-        clicked = False
-        for sel in [
-            'button:has-text("Standard Headhunting")',
-            '[role="tab"]:has-text("Standard Headhunting")',
-            'a:has-text("Standard Headhunting")',
-            'li:has-text("Standard Headhunting")',
-            'div[class*="tab"]:has-text("Standard Headhunting")',
-            'span[class*="tab"]:has-text("Standard Headhunting")',
-        ]:
+        # It's a DROPDOWN - select "Standard Headhunting"
+        try:
+            # Try native <select>
+            page.select_option('select', label='Standard Headhunting')
+            page.wait_for_timeout(3000)
+        except Exception:
             try:
-                el = page.locator(sel).first
-                el.wait_for(state="visible", timeout=3000)
-                el.click()
-                page.wait_for_timeout(2000)
-                clicked = True
-                break
-            except Exception:
-                continue
-
-        if not clicked:
-            try:
-                page.get_by_text("Standard Headhunting", exact=True).first.click()
-                page.wait_for_timeout(2000)
+                # Custom dropdown: click it to open, then click the option
+                page.locator('[class*="dropdown"], [class*="select"]').first.click()
+                page.wait_for_timeout(1000)
+                page.get_by_text("Standard Headhunting", exact=True).click()
+                page.wait_for_timeout(3000)
             except Exception as e:
-                print(f"Warning: could not click Standard Headhunting tab: {e}")
+                print(f"Warning: dropdown select failed: {e}")
+
+        # Wait for real values to appear (not 0)
+        try:
+            page.wait_for_function("""
+                () => {
+                    const text = document.body.innerText;
+                    return text.includes('176') || text.includes('1 6');
+                }
+            """, timeout=15000)
+        except Exception:
+            pass
 
         content = page.inner_text("body")
         browser.close()
