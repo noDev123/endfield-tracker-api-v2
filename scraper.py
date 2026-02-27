@@ -17,31 +17,24 @@ def scrape():
         )
         page.wait_for_timeout(8000)
 
-        # It's a DROPDOWN - select "Standard Headhunting"
+        # It's a custom dropdown - click the trigger to open it, then pick Standard Headhunting
         try:
-            # Try native <select>
-            page.select_option('select', label='Standard Headhunting')
-            page.wait_for_timeout(3000)
-        except Exception:
+            # Click the dropdown trigger (shows current selection like "Special Headhunting")
+            page.locator('button:has-text("Special Headhunting"), button:has-text("Headhunting")').first.click()
+            page.wait_for_timeout(1000)
+            # Now click Standard Headhunting from the opened list
+            page.get_by_text("Standard Headhunting", exact=True).click()
+            page.wait_for_timeout(4000)
+            print("Switched to Standard Headhunting via dropdown")
+        except Exception as e:
+            print(f"Dropdown attempt 1 failed: {e}")
             try:
-                # Custom dropdown: click it to open, then click the option
-                page.locator('[class*="dropdown"], [class*="select"]').first.click()
-                page.wait_for_timeout(1000)
-                page.get_by_text("Standard Headhunting", exact=True).click()
-                page.wait_for_timeout(3000)
-            except Exception as e:
-                print(f"Warning: dropdown select failed: {e}")
-
-        # Wait for real values to appear (not 0)
-        try:
-            page.wait_for_function("""
-                () => {
-                    const text = document.body.innerText;
-                    return text.includes('176') || text.includes('1 6');
-                }
-            """, timeout=15000)
-        except Exception:
-            pass
+                # Fallback: native select
+                page.select_option('select', label='Standard Headhunting')
+                page.wait_for_timeout(4000)
+                print("Switched via native select")
+            except Exception as e2:
+                print(f"Dropdown attempt 2 failed: {e2}")
 
         content = page.inner_text("body")
         browser.close()
@@ -56,25 +49,34 @@ def scrape():
                     return lines[t] if t < len(lines) else 'N/A'
             return 'N/A'
 
-        total_users    = after('Total Users')
-        total_pulls    = after('Total Pulls')
-        oroberyl_spent = after('Oroberyl Spent', offset=2)
-        if not re.match(r'^[\d\s,]+$', oroberyl_spent):
-            oroberyl_spent = after('Oroberyl Spent', offset=1)
+        total_users = after('Total Users')
+        total_pulls = after('Total Pulls')
 
+        # Oroberyl: find the line, then grab next line that's purely a big number
+        oroberyl_spent = 'N/A'
+        for i, l in enumerate(lines):
+            if l == 'Oroberyl Spent':
+                for j in range(i + 1, min(i + 5, len(lines))):
+                    if re.match(r'^[\d\s,]+$', lines[j]) and len(lines[j].replace(' ', '').replace(',', '')) > 4:
+                        oroberyl_spent = lines[j]
+                        break
+                break
+
+        # 6★ Stats - use 'in' check to handle emoji like "6 🏔 Stats"
         rate6 = count6 = median_pity = 'N/A'
         for i, l in enumerate(lines):
-            if re.match(r'^6.{0,3}Stats$', l):
+            if '6' in l and 'Stats' in l and '5' not in l:
                 for j in range(i + 1, min(i + 20, len(lines))):
-                    if re.match(r'^5.{0,3}Stats$', lines[j]): break
+                    if '5' in lines[j] and 'Stats' in lines[j]: break
                     if lines[j] == 'Rate'        and j+1 < len(lines): rate6       = lines[j+1]
                     if lines[j] == 'Count'       and j+1 < len(lines): count6      = lines[j+1]
                     if lines[j] == 'Median Pity' and j+1 < len(lines): median_pity = lines[j+1]
                 break
 
+        # 5★ Stats
         rate5 = count5 = 'N/A'
         for i, l in enumerate(lines):
-            if re.match(r'^5.{0,3}Stats$', l):
+            if '5' in l and 'Stats' in l:
                 for j in range(i + 1, min(i + 15, len(lines))):
                     if lines[j] == 'Rate'  and j+1 < len(lines): rate5  = lines[j+1]
                     if lines[j] == 'Count' and j+1 < len(lines): count5 = lines[j+1]
@@ -93,7 +95,7 @@ def scrape():
                 f"    Count        : {count6}\n"
                 f"    Median Pity  : {median_pity}\n"
                 f"\n"
-                f"  5-Star\n"
+                f"  5-Startest\n"
                 f"    Rate         : {rate5}\n"
                 f"    Count        : {count5}\n"
             )
