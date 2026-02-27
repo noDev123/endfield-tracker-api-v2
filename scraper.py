@@ -12,38 +12,93 @@ def scrape():
         page = browser.new_page()
         page.goto(
             "https://goyfield.moe/records/global",
-            wait_until="networkidle",
+            wait_until="domcontentloaded",
             timeout=60000
         )
+        page.wait_for_timeout(8000)
 
-        # Wait until real stats are rendered (not 0)
-        page.wait_for_function("""
-            () => {
-                const spans = document.querySelectorAll('span.font-bold');
-                for (const s of spans) {
-                    if (s.innerText && s.innerText !== '0' && s.innerText !== '0.00%') return true;
-                }
-                return false;
-            }
-        """, timeout=30000)
+        # Click the Standard Headhunting tab
+        clicked = False
+        for sel in [
+            'button:has-text("Standard Headhunting")',
+            '[role="tab"]:has-text("Standard Headhunting")',
+            'a:has-text("Standard Headhunting")',
+            'li:has-text("Standard Headhunting")',
+            'div[class*="tab"]:has-text("Standard Headhunting")',
+            'span[class*="tab"]:has-text("Standard Headhunting")',
+        ]:
+            try:
+                el = page.locator(sel).first
+                el.wait_for(state="visible", timeout=3000)
+                el.click()
+                page.wait_for_timeout(2000)
+                clicked = True
+                break
+            except Exception:
+                continue
 
-        # Click Standard Headhunting tab
-        page.get_by_text("Standard Headhunting", exact=True).first.click()
-        page.wait_for_timeout(3000)
+        if not clicked:
+            try:
+                page.get_by_text("Standard Headhunting", exact=True).first.click()
+                page.wait_for_timeout(2000)
+            except Exception as e:
+                print(f"Warning: could not click Standard Headhunting tab: {e}")
 
-        # Dump raw HTML so we can see exact structure
-        html = page.content()
-        print("=== HTML SNIPPET (searching for font-bold spans) ===")
-        # Print every line containing font-bold
-        for line in html.split('\n'):
-            if 'font-bold' in line or 'Total Users' in line or 'Total Pulls' in line or 'Oroberyl' in line or 'Rate' in line or 'Count' in line or 'Median' in line or 'Stats' in line:
-                print(line.strip())
-
-        # Also print full inner text
-        print("\n=== FULL INNER TEXT ===")
-        print(page.inner_text("body"))
-
+        content = page.inner_text("body")
         browser.close()
+
+        lines = [l.strip().replace('\xa0', '').replace('\u202f', '') for l in content.splitlines()]
+        lines = [l for l in lines if l]
+
+        def after(label, offset=1):
+            for i, l in enumerate(lines):
+                if l == label:
+                    t = i + offset
+                    return lines[t] if t < len(lines) else 'N/A'
+            return 'N/A'
+
+        total_users    = after('Total Users')
+        total_pulls    = after('Total Pulls')
+        oroberyl_spent = after('Oroberyl Spent', offset=2)
+        if not re.match(r'^[\d\s,]+$', oroberyl_spent):
+            oroberyl_spent = after('Oroberyl Spent', offset=1)
+
+        rate6 = count6 = median_pity = 'N/A'
+        for i, l in enumerate(lines):
+            if re.match(r'^6.{0,3}Stats$', l):
+                for j in range(i + 1, min(i + 20, len(lines))):
+                    if re.match(r'^5.{0,3}Stats$', lines[j]): break
+                    if lines[j] == 'Rate'        and j+1 < len(lines): rate6       = lines[j+1]
+                    if lines[j] == 'Count'       and j+1 < len(lines): count6      = lines[j+1]
+                    if lines[j] == 'Median Pity' and j+1 < len(lines): median_pity = lines[j+1]
+                break
+
+        rate5 = count5 = 'N/A'
+        for i, l in enumerate(lines):
+            if re.match(r'^5.{0,3}Stats$', l):
+                for j in range(i + 1, min(i + 15, len(lines))):
+                    if lines[j] == 'Rate'  and j+1 < len(lines): rate5  = lines[j+1]
+                    if lines[j] == 'Count' and j+1 < len(lines): count5 = lines[j+1]
+                break
+
+        os.makedirs('docs', exist_ok=True)
+        with open('docs/stats.txt', 'w', encoding='utf-8') as f:
+            f.write(
+                f"[Standard Headhunting]\n"
+                f"  Total Users    : {total_users}\n"
+                f"  Total Pulls    : {total_pulls}\n"
+                f"  Oroberyl Spent : {oroberyl_spent}\n"
+                f"\n"
+                f"  6-Star\n"
+                f"    Rate         : {rate6}\n"
+                f"    Count        : {count6}\n"
+                f"    Median Pity  : {median_pity}\n"
+                f"\n"
+                f"  5-Star\n"
+                f"    Rate         : {rate5}\n"
+                f"    Count        : {count5}\n"
+            )
+        print("Done")
 
 
 scrape()
