@@ -8,6 +8,6 @@
     Count        : N/A
     Median Pity  : N/A
 
-  5-Startest
+  5-Star
     Rate         : N/A
     Count        : N/A
