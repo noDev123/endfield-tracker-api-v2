@@ -1,10 +1,13 @@
-total-pulls: N/A
-total-users: N/A
-oroberyl-spent: N/A
-6star-rate: N/A
-6star-count: N/A
-6star-median-pity: N/A
-5star-rate: N/A
-5star-count: N/A
+[Standard Headhunting]
+  Total Users    : 426
+  Total Pulls    : 26544
+  Oroberyl Spent : 6
 
-headhunt-banners: {Light, 26 544 pulls, N/A 6-star, N/A 5-star, 426 users}, {Special Headhunting, 26 544 pulls, N/A 6-star, N/A 5-star, 426 users}, {Hues Of Passion, 26 544 pulls, N/A 6-star, N/A 5-star, 426 users}, {Decline, 26 544 pulls, N/A 6-star, N/A 5-star, 426 users}, {Accept, 26 544 pulls, N/A 6-star, N/A 5-star, 426 users}
+  6-Star
+    Rate         : N/A
+    Count        : N/A
+    Median Pity  : N/A
+
+  5-Star
+    Rate         : N/A
+    Count        : N/A
