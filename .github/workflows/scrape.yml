@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: main        # always pull the latest main, not a cached ref
+      - name: Show current commit
+        run: git log -1 --oneline
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
