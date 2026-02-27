@@ -1,6 +1,5 @@
 from playwright.sync_api import sync_playwright
 import re
-import json
 import os
 
 
@@ -16,112 +15,97 @@ def scrape():
             wait_until="domcontentloaded",
             timeout=60000
         )
-
-        # Wait for JS to hydrate the page
         page.wait_for_timeout(8000)
 
-        # ── Get banner tab names ──────────────────────────────────────────────
-        # Tabs are rendered as clickable elements in the Global Statistics section
-        tab_elements = page.locator('button, [role="tab"]').all()
-        banner_names = []
-        for tab in tab_elements:
-            name = tab.inner_text().strip()
-            if name and name not in ('', 'Dark', 'English'):
-                banner_names.append(name)
-
-        # Fallback: read from visible text if no tab elements found
-        if not banner_names:
-            body = page.inner_text("body")
-            # Known banner sections on goyfield
-            for candidate in ['Special Headhunting', 'Standard Headhunting', 'Crossover Headhunting']:
-                if candidate in body:
-                    banner_names.append(candidate)
-
-        stats = {}
-        banners = []
-
-        for name in banner_names:
+        # Click the Standard Headhunting tab
+        clicked = False
+        for sel in [
+            'button:has-text("Standard Headhunting")',
+            '[role="tab"]:has-text("Standard Headhunting")',
+            'a:has-text("Standard Headhunting")',
+            'li:has-text("Standard Headhunting")',
+            'div[class*="tab"]:has-text("Standard Headhunting")',
+            'span[class*="tab"]:has-text("Standard Headhunting")',
+        ]:
             try:
-                # Click the banner tab
-                page.locator(f'button:has-text("{name}"), [role="tab"]:has-text("{name}")').first.click()
+                el = page.locator(sel).first
+                el.wait_for(state="visible", timeout=3000)
+                el.click()
                 page.wait_for_timeout(2000)
+                clicked = True
+                break
             except Exception:
-                pass
+                continue
 
-            content = page.inner_text("body")
+        if not clicked:
+            try:
+                page.get_by_text("Standard Headhunting", exact=True).first.click()
+                page.wait_for_timeout(2000)
+            except Exception as e:
+                print(f"Warning: could not click Standard Headhunting tab: {e}")
 
-            # ── Overview ─────────────────────────────────────────────────────
-            users_match  = re.search(r'Total Users\s*\n\s*([\d\s,]+)', content)
-            pulls_match  = re.search(r'Total Pulls\s*\n\s*([\d\s,]+)', content)
-            oro_match    = re.search(r'Oroberyl Spent\s*\n.*?\n\s*([\d\s,]+)', content)
+        content = page.inner_text("body")
 
-            # ── 6★ stats ─────────────────────────────────────────────────────
-            rate6_match  = re.search(r'6 Stats\s*\n.*?Rate\s*\n\s*([\d.]+%)', content, re.DOTALL)
-            count6_match = re.search(r'6 Stats\s*\n.*?Count\s*\n\s*([\d\s,]+)', content, re.DOTALL)
-            pity6_match  = re.search(r'Median Pity\s*\n\s*([\d]+)', content)
+        # Debug snapshot
+        print("=== RAW BODY (first 3000 chars) ===")
+        print(content[:3000])
+        print("====================================")
 
-            # ── 5★ stats ─────────────────────────────────────────────────────
-            rate5_match  = re.search(r'5 Stats\s*\n.*?Rate\s*\n\s*([\d.]+%)', content, re.DOTALL)
-            count5_match = re.search(r'5 Stats\s*\n.*?Count\s*\n\s*([\d\s,]+)', content, re.DOTALL)
-
-            def g(m, grp=1):
-                return m.group(grp).strip().replace('\n', '').replace(' ', '') if m else 'N/A'
-
-            banner_data = {
-                'name':           name,
-                'total_users':    g(users_match),
-                'total_pulls':    g(pulls_match),
-                'oroberyl_spent': g(oro_match),
-                '6star_rate':     g(rate6_match),
-                '6star_count':    g(count6_match),
-                '6star_median_pity': g(pity6_match),
-                '5star_rate':     g(rate5_match),
-                '5star_count':    g(count5_match),
-            }
-            banners.append(banner_data)
-
-            # Store Standard Headhunting as top-level for easy access
-            if 'Standard' in name:
-                stats['total_pulls']    = banner_data['total_pulls']
-                stats['total_users']    = banner_data['total_users']
-                stats['oroberyl_spent'] = banner_data['oroberyl_spent']
-                stats['6star_rate']     = banner_data['6star_rate']
-                stats['6star_count']    = banner_data['6star_count']
-                stats['6star_median_pity'] = banner_data['6star_median_pity']
-                stats['5star_rate']     = banner_data['5star_rate']
-                stats['5star_count']    = banner_data['5star_count']
-
-        stats['banners'] = banners
         browser.close()
-        return stats
+
+        # Parse
+        lines = [l.strip().replace('\xa0', '').replace('\u202f', '') for l in content.splitlines()]
+        lines = [l for l in lines if l]
+
+        def after(label, offset=1):
+            for i, l in enumerate(lines):
+                if l == label:
+                    t = i + offset
+                    return lines[t] if t < len(lines) else 'N/A'
+            return 'N/A'
+
+        total_users    = after('Total Users')
+        total_pulls    = after('Total Pulls')
+        oroberyl_spent = after('Oroberyl Spent', offset=2)
+        if not re.match(r'^[\d\s,]+$', oroberyl_spent):
+            oroberyl_spent = after('Oroberyl Spent', offset=1)
+
+        rate6 = count6 = median_pity = 'N/A'
+        for i, l in enumerate(lines):
+            if re.match(r'^6.{0,3}Stats$', l):
+                for j in range(i + 1, min(i + 20, len(lines))):
+                    if re.match(r'^5.{0,3}Stats$', lines[j]): break
+                    if lines[j] == 'Rate'        and j+1 < len(lines): rate6       = lines[j+1]
+                    if lines[j] == 'Count'       and j+1 < len(lines): count6      = lines[j+1]
+                    if lines[j] == 'Median Pity' and j+1 < len(lines): median_pity = lines[j+1]
+                break
+
+        rate5 = count5 = 'N/A'
+        for i, l in enumerate(lines):
+            if re.match(r'^5.{0,3}Stats$', l):
+                for j in range(i + 1, min(i + 15, len(lines))):
+                    if lines[j] == 'Rate'  and j+1 < len(lines): rate5  = lines[j+1]
+                    if lines[j] == 'Count' and j+1 < len(lines): count5 = lines[j+1]
+                break
+
+        os.makedirs('docs', exist_ok=True)
+        with open('docs/stats.txt', 'w', encoding='utf-8') as f:
+            f.write(
+                f"[Standard Headhunting]\n"
+                f"  Total Users    : {total_users}\n"
+                f"  Total Pulls    : {total_pulls}\n"
+                f"  Oroberyl Spent : {oroberyl_spent}\n"
+                f"\n"
+                f"  6-Star\n"
+                f"    Rate         : {rate6}\n"
+                f"    Count        : {count6}\n"
+                f"    Median Pity  : {median_pity}\n"
+                f"\n"
+                f"  5-Star\n"
+                f"    Rate         : {rate5}\n"
+                f"    Count        : {count5}\n"
+            )
+        print("Done")
 
 
-# ── Run ───────────────────────────────────────────────────────────────────────
-data = scrape()
-
-# Format banner line like friend's style
-banner_parts = []
-for b in data['banners']:
-    banner_parts.append(
-        f"{{{b['name']}, {b['total_pulls']} pulls, "
-        f"{b['6star_rate']} 6-star, {b['5star_rate']} 5-star, "
-        f"{b['total_users']} users}}"
-    )
-banner_line = ', '.join(banner_parts) if banner_parts else 'Not found'
-
-# Write to docs/stats.txt
-os.makedirs('docs', exist_ok=True)
-with open('docs/stats.txt', 'w', encoding='utf-8') as f:
-    f.write(
-        f"total-pulls: {data.get('total_pulls', 'N/A')}\n"
-        f"total-users: {data.get('total_users', 'N/A')}\n"
-        f"oroberyl-spent: {data.get('oroberyl_spent', 'N/A')}\n"
-        f"6star-rate: {data.get('6star_rate', 'N/A')}\n"
-        f"6star-count: {data.get('6star_count', 'N/A')}\n"
-        f"6star-median-pity: {data.get('6star_median_pity', 'N/A')}\n"
-        f"5star-rate: {data.get('5star_rate', 'N/A')}\n"
-        f"5star-count: {data.get('5star_count', 'N/A')}\n"
-        f"\nheadhunt-banners: {banner_line}\n"
-    )
-
-print("Done:", json.dumps(data, indent=2, ensure_ascii=False))
+scrape()
