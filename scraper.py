@@ -93,7 +93,7 @@ def scrape():
                 f"    Count        : {count6}\n"
                 f"    Median Pity  : {median_pity}\n"
                 f"\n"
-                f"  5-Star\n"
+                f"  5-Startest\n"
                 f"    Rate         : {rate5}\n"
                 f"    Count        : {count5}\n"
             )
