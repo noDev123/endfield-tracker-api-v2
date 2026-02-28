@@ -1,105 +1,237 @@
 from playwright.sync_api import sync_playwright
-import re
+import json
 import os
+import time
+
+
+def get_stats(page):
+    return page.evaluate("""() => {
+        function getText(el) { return el.innerText ? el.innerText.trim() : ''; }
+        function getValueNear(label) {
+            for (const el of document.querySelectorAll('*')) {
+                if (el.children.length > 0) continue;
+                if (getText(el) === label) {
+                    for (const s of el.parentElement.children)
+                        if (s !== el && getText(s)) return getText(s);
+                    for (const c of el.parentElement.parentElement.children)
+                        if (c !== el.parentElement && getText(c)) return getText(c);
+                }
+            }
+            return null;
+        }
+        function getStarSection(n) {
+            for (const el of document.querySelectorAll('*')) {
+                const t = getText(el);
+                if (t.startsWith(String(n)) && t.includes('Stats') && el.children.length <= 3) {
+                    const leaves = [...el.closest('section,div').querySelectorAll('*')]
+                        .filter(e => e.children.length === 0 && getText(e));
+                    let rate=null, count=null, pity=null, won=null;
+                    for (let i=0; i<leaves.length; i++) {
+                        const t=getText(leaves[i]), nx=leaves[i+1]?getText(leaves[i+1]):null;
+                        if (t==='Rate'&&!rate) rate=nx;
+                        if (t==='Count'&&!count) count=nx;
+                        if (t==='Median Pity'&&!pity) pity=nx;
+                        if ((t==='Won 50:50'||t==='Won 25:75')&&!won) won=nx;
+                    }
+                    if (rate||count||pity) return {rate,count,pity,won};
+                }
+            }
+            return {rate:null,count:null,pity:null,won:null};
+        }
+        const six=getStarSection(6), five=getStarSection(5);
+
+        // Total Obtained: number shown in the featured character card
+        // Try "TOTAL OBTAINED" label first, then any number near character name
+        let total_obtained = null;
+
+        // Strategy 1: find "TOTAL OBTAINED" label and grab nearby number
+        for (const el of document.querySelectorAll('*')) {
+            if (el.children.length === 0 && getText(el).includes('TOTAL OBTAINED')) {
+                const parent = el.parentElement;
+                const gp = parent.parentElement;
+                // Check siblings
+                for (const s of parent.children)
+                    if (s !== el && getText(s).match(/^[0-9 ]+$/)) { total_obtained = getText(s).replace(/ /g,''); break; }
+                // Check parent siblings
+                if (!total_obtained) {
+                    for (const c of gp.children)
+                        if (c !== parent && getText(c).match(/^[0-9 ]+$/)) { total_obtained = getText(c).replace(/ /g,''); break; }
+                }
+                break;
+            }
+        }
+
+        // Strategy 2: find any standalone number in the character card area
+        // The card usually has: [img] [name] [TOTAL OBTAINED] [number]
+        if (!total_obtained) {
+            // Look for a div/section that has both a name-like text and a number
+            const cards = [...document.querySelectorAll('div, section')].filter(el => {
+                const t = el.innerText || '';
+                return t.includes('TOTAL') || t.includes('Total Obtained') || t.includes('obtained');
+            });
+            for (const card of cards) {
+                const leaves = [...card.querySelectorAll('*')].filter(e => e.children.length === 0 && getText(e));
+                for (const leaf of leaves) {
+                    if (getText(leaf).match(/^[0-9 ]{1,6}$/) && parseInt(getText(leaf).replace(/ /g,'')) > 0) {
+                        total_obtained = getText(leaf).replace(/ /g,'');
+                        break;
+                    }
+                }
+                if (total_obtained) break;
+            }
+        }
+
+        // Featured character % = first % value in the 6-star list table
+        let featured_pct = null;
+        for (const el of document.querySelectorAll('*')) {
+            if (el.children.length === 0) {
+                const t = getText(el);
+                if (t.match(/^[0-9]+[.][0-9]+%$/) && !featured_pct) {
+                    featured_pct = t;
+                    break;
+                }
+            }
+        }
+
+        return {
+            total_users: getValueNear('Total Users'),
+            total_pulls: getValueNear('Total Pulls'),
+            oroberyl_spent: getValueNear('Oroberyl Spent'),
+            total_obtained,
+            rate6:six.rate, count6:six.count, pity6:six.pity, won6:six.won,
+            rate5:five.rate, count5:five.count,
+            featured_pct,
+        };
+    }""")
+
+
+def clean(v):
+    if v is None: return None
+    n = v.replace(' ','').replace(',','').replace('\xa0','').replace('\u202f','')
+    try: return int(n)
+    except:
+        try: return float(n)
+        except: return v
+
+
+def build_entry(raw, include_obtained=False):
+    entry = {
+        "Total Users":    clean(raw.get('total_users')),
+        "Total Pulls":    clean(raw.get('total_pulls')),
+        "Oroberyl Spent": clean(raw.get('oroberyl_spent')),
+        "6-Star": {
+            "Rate":        raw.get('rate6'),
+            "Count":       clean(raw.get('count6')),
+            "Median Pity": clean(raw.get('pity6')),
+            "Won":         raw.get('won6')
+        },
+        "5-Star": {"Rate": raw.get('rate5'), "Count": clean(raw.get('count5'))}
+    }
+    if include_obtained:
+        entry["Total Obtained"] = clean(raw.get('total_obtained'))
+        entry["Featured 6-Star %"] = raw.get('featured_pct')
+    return entry
+
+
+def get_banner_trigger(page, exclude_text='Headhunting'):
+    """Get the banner dropdown trigger button (has img, not the type selector)."""
+    return page.locator('button').filter(has=page.locator('img')).filter(has_not_text=exclude_text).first
+
+
+def scrape_sub_banners(page, trigger):
+    """Generic: scrape all sub-banners from a dropdown trigger. Returns dict of {name: data}."""
+    result = {}
+
+    # Scrape the default (already selected) banner first without clicking
+    default_banner = trigger.inner_text().strip()
+    print(f"  Default: {default_banner}")
+    result[default_banner] = build_entry(get_stats(page), include_obtained=True)
+    print(f"    done")
+
+    # Open dropdown and get other banner names
+    trigger.click()
+    page.wait_for_timeout(2000)
+
+    other_banners = []
+    for li in page.locator('li').all():
+        name = li.inner_text().strip()
+        if name and len(name) > 1 and name != default_banner:
+            other_banners.append(name)
+
+    print(f"  Others: {other_banners}")
+
+    # Click each and scrape
+    for name in other_banners:
+        try:
+            if not page.locator('li').first.is_visible():
+                trigger.click()
+                page.wait_for_timeout(2000)
+            for li in page.locator('li').all():
+                if name in li.inner_text():
+                    li.click()
+                    break
+            page.wait_for_timeout(3000)
+            result[name] = build_entry(get_stats(page), include_obtained=True)
+            print(f"    {name} done")
+        except Exception as e:
+            print(f"    {name} error: {e}")
+            result[name] = None
+
+    return result
 
 
 def scrape():
     with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=True,
-            args=['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
-        )
+        browser = p.chromium.launch(headless=True,
+            args=['--no-sandbox','--disable-setuid-sandbox','--disable-dev-shm-usage'])
         page = browser.new_page()
-        page.goto(
-            "https://goyfield.moe/records/global",
-            wait_until="networkidle",
-            timeout=60000
-        )
+        page.goto("https://goyfield.moe/records/global", wait_until="networkidle", timeout=60000)
         page.wait_for_timeout(8000)
 
-        # It's a custom dropdown - click the trigger to open it, then pick Standard Headhunting
-        try:
-            # Click the dropdown trigger (shows current selection like "Special Headhunting")
-            page.locator('button:has-text("Special Headhunting"), button:has-text("Headhunting")').first.click()
-            page.wait_for_timeout(1000)
-            # Now click Standard Headhunting from the opened list
-            page.get_by_text("Standard Headhunting", exact=True).click()
-            page.wait_for_timeout(4000)
-            print("Switched to Standard Headhunting via dropdown")
-        except Exception as e:
-            print(f"Dropdown attempt 1 failed: {e}")
-            try:
-                # Fallback: native select
-                page.select_option('select', label='Standard Headhunting')
-                page.wait_for_timeout(4000)
-                print("Switched via native select")
-            except Exception as e2:
-                print(f"Dropdown attempt 2 failed: {e2}")
+        result = {}
 
-        content = page.inner_text("body")
+        # ── Standard Headhunting ─────────────────────────────────────────────
+        page.locator('button:has-text("Special Headhunting")').first.click()
+        page.wait_for_timeout(1000)
+        page.get_by_text("Standard Headhunting", exact=True).click()
+        page.wait_for_timeout(3000)
+        result["Standard Headhunting"] = build_entry(get_stats(page))
+        print("Standard Headhunting done")
+
+        # ── Special Headhunting ──────────────────────────────────────────────
+        page.locator('button:has-text("Standard Headhunting")').first.click()
+        page.wait_for_timeout(1000)
+        page.get_by_text("Special Headhunting", exact=True).click()
+        page.wait_for_timeout(3000)
+        print("Scraping Special Headhunting...")
+        trigger = get_banner_trigger(page, exclude_text='Headhunting')
+        result["Special Headhunting"] = scrape_sub_banners(page, trigger)
+
+        # ── Event Weapon ─────────────────────────────────────────────────────
+        page.locator('button:has-text("Special Headhunting")').first.click()
+        page.wait_for_timeout(1000)
+        page.get_by_text("Event Weapon", exact=True).click()
+        page.wait_for_timeout(3000)
+        print("Scraping Event Weapon...")
+        trigger_weapon = get_banner_trigger(page, exclude_text='Event Weapon')
+        result["Event Weapon"] = scrape_sub_banners(page, trigger_weapon)
+
+        # ── Standard Weapon ──────────────────────────────────────────────────
+        page.locator('button:has-text("Event Weapon")').first.click()
+        page.wait_for_timeout(1000)
+        page.get_by_text("Standard Weapon", exact=True).click()
+        page.wait_for_timeout(3000)
+        print("Scraping Standard Weapon...")
+        trigger_std_weapon = get_banner_trigger(page, exclude_text='Standard Weapon')
+        result["Standard Weapon"] = scrape_sub_banners(page, trigger_std_weapon)
+
         browser.close()
 
-        lines = [l.strip().replace('\xa0', '').replace('\u202f', '') for l in content.splitlines()]
-        lines = [l for l in lines if l]
-
-        def after(label, offset=1):
-            for i, l in enumerate(lines):
-                if l == label:
-                    t = i + offset
-                    return lines[t] if t < len(lines) else 'N/A'
-            return 'N/A'
-
-        total_users = after('Total Users')
-        total_pulls = after('Total Pulls')
-
-        # Oroberyl: find the line, then grab next line that's purely a big number
-        oroberyl_spent = 'N/A'
-        for i, l in enumerate(lines):
-            if l == 'Oroberyl Spent':
-                for j in range(i + 1, min(i + 5, len(lines))):
-                    if re.match(r'^[\d\s,]+$', lines[j]) and len(lines[j].replace(' ', '').replace(',', '')) > 4:
-                        oroberyl_spent = lines[j]
-                        break
-                break
-
-        # 6★ Stats - use 'in' check to handle emoji like "6 🏔 Stats"
-        rate6 = count6 = median_pity = 'N/A'
-        for i, l in enumerate(lines):
-            if '6' in l and 'Stats' in l and '5' not in l:
-                for j in range(i + 1, min(i + 20, len(lines))):
-                    if '5' in lines[j] and 'Stats' in lines[j]: break
-                    if lines[j] == 'Rate'        and j+1 < len(lines): rate6       = lines[j+1]
-                    if lines[j] == 'Count'       and j+1 < len(lines): count6      = lines[j+1]
-                    if lines[j] == 'Median Pity' and j+1 < len(lines): median_pity = lines[j+1]
-                break
-
-        # 5★ Stats
-        rate5 = count5 = 'N/A'
-        for i, l in enumerate(lines):
-            if '5' in l and 'Stats' in l:
-                for j in range(i + 1, min(i + 15, len(lines))):
-                    if lines[j] == 'Rate'  and j+1 < len(lines): rate5  = lines[j+1]
-                    if lines[j] == 'Count' and j+1 < len(lines): count5 = lines[j+1]
-                break
-
         os.makedirs('docs', exist_ok=True)
-        with open('docs/stats.txt', 'w', encoding='utf-8') as f:
-            f.write(
-                f"[Standard Headhunting]\n"
-                f"  Total Users    : {total_users}\n"
-                f"  Total Pulls    : {total_pulls}\n"
-                f"  Oroberyl Spent : {oroberyl_spent}\n"
-                f"\n"
-                f"  6-Star\n"
-                f"    Rate         : {rate6}\n"
-                f"    Count        : {count6}\n"
-                f"    Median Pity  : {median_pity}\n"
-                f"\n"
-                f"  5-Startest\n"
-                f"    Rate         : {rate5}\n"
-                f"    Count        : {count5}\n"
-            )
-        print("Done")
+        with open('docs/stats.json', 'w', encoding='utf-8') as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        print("\nDone:")
+        print(json.dumps(result, indent=2, ensure_ascii=False))
 
 
 scrape()
