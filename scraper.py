@@ -40,6 +40,36 @@ def get_stats(page):
         }
         const six=getStarSection(6), five=getStarSection(5);
 
+        // Featured character/weapon image - find img in the character card area
+        // The card is the small box top-left with name + TOTAL OBTAINED
+        let featured_img = null;
+        const allImgs = Array.from(document.querySelectorAll('img'));
+        // Log all img srcs for debugging
+        const allSrcs = allImgs.map(i => i.getAttribute('src')).filter(s => s && !s.includes('miniIcon') && !s.includes('icon') && !s.includes('currencies') && !s.includes('banner'));
+        // Try known operator path first
+        for (const img of allImgs) {
+            const src = img.getAttribute('src') || '';
+            if (src.includes('/operators/preview/') || src.includes('/images/weapons/')) {
+                featured_img = 'https://goyfield.moe' + src;
+                break;
+            }
+        }
+        // Fallback: find img that's inside the character card (near TOTAL OBTAINED text)
+        if (!featured_img) {
+            for (const el of document.querySelectorAll('*')) {
+                if (el.innerText && el.innerText.trim() === 'TOTAL OBTAINED') {
+                    const card = el.closest('div') || el.parentElement.parentElement;
+                    const img = card ? card.querySelector('img') : null;
+                    if (img) { featured_img = 'https://goyfield.moe' + img.getAttribute('src'); break; }
+                }
+            }
+        }
+        // Last resort: any img whose src has a path depth suggesting it's a preview image
+        if (!featured_img && allSrcs.length > 0) {
+            const candidate = allSrcs.find(s => s.split('/').length >= 4);
+            if (candidate) featured_img = 'https://goyfield.moe' + candidate;
+        }
+
         // Total Obtained: number shown in the featured character card
         // Try "TOTAL OBTAINED" label first, then any number near character name
         let total_obtained = null;
@@ -101,6 +131,7 @@ def get_stats(page):
             rate6:six.rate, count6:six.count, pity6:six.pity, won6:six.won,
             rate5:five.rate, count5:five.count,
             featured_pct,
+            featured_img,
         };
     }""")
 
@@ -130,6 +161,7 @@ def build_entry(raw, include_obtained=False):
     if include_obtained:
         entry["Total Obtained"] = clean(raw.get('total_obtained'))
         entry["Featured 6-Star %"] = raw.get('featured_pct')
+        entry["Featured Image"] = raw.get('featured_img')
     return entry
 
 
