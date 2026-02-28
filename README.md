@@ -22,3 +22,4 @@ Special thanks to Goyfield for the provision and contribution to this project. T
 
 - **Discord**: I do not have a Discord server for this project. However you can join [Goyfield's Official Discord Server](https://discord.gg/zUMMBfUYsK). I'm there to help you.
 
+> Note: I have made comments in scraper.py to help you understand the code. Please read it as well!
