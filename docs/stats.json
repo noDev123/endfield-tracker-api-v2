@@ -1,67 +1,67 @@
 {
   "Standard Headhunting": {
-    "Total Users": 1713,
-    "Total Pulls": 181990,
-    "Oroberyl Spent": 90995000,
+    "Total Users": 1715,
+    "Total Pulls": 182173,
+    "Oroberyl Spent": 91086500,
     "6-Star": {
       "Rate": "1.578%",
-      "Count": 2872,
+      "Count": 2875,
       "Median Pity": 58,
       "Won": null
     },
     "5-Star": {
       "Rate": "13.338%",
-      "Count": 24274
+      "Count": 24299
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 493,
-      "Total Pulls": 30749,
-      "Oroberyl Spent": 15374500,
+      "Total Users": 496,
+      "Total Pulls": 30981,
+      "Oroberyl Spent": 15490500,
       "6-Star": {
-        "Rate": "1.844%",
-        "Count": 567,
+        "Rate": "1.840%",
+        "Count": 570,
         "Median Pity": 23,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "11.838%",
-        "Count": 3640
+        "Rate": "11.827%",
+        "Count": 3664
       },
-      "Total Obtained": 329,
-      "Featured 6-Star %": "1.844%"
+      "Total Obtained": 331,
+      "Featured 6-Star %": "1.840%"
     },
     "The Floaty Messenger": {
-      "Total Users": 1672,
-      "Total Pulls": 135544,
-      "Oroberyl Spent": 67772000,
+      "Total Users": 1674,
+      "Total Pulls": 135700,
+      "Oroberyl Spent": 67850000,
       "6-Star": {
-        "Rate": "1.907%",
-        "Count": 2585,
+        "Rate": "1.906%",
+        "Count": 2586,
         "Median Pity": 30,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "12.349%",
-        "Count": 16738
+        "Rate": "12.348%",
+        "Count": 16756
       },
       "Total Obtained": 30,
-      "Featured 6-Star %": "1.907%"
+      "Featured 6-Star %": "1.906%"
     },
     "Scars Of The Forge": {
-      "Total Users": 1640,
-      "Total Pulls": 174023,
-      "Oroberyl Spent": 87011500,
+      "Total Users": 1642,
+      "Total Pulls": 174240,
+      "Oroberyl Spent": 87120000,
       "6-Star": {
         "Rate": "1.742%",
-        "Count": 3032,
+        "Count": 3036,
         "Median Pity": 44,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "12.533%",
-        "Count": 21810
+        "Rate": "12.536%",
+        "Count": 21843
       },
       "Total Obtained": 44,
       "Featured 6-Star %": "1.742%"
@@ -69,142 +69,142 @@
   },
   "Event Weapon": {
     "Graffiti Issue": {
-      "Total Users": 298,
-      "Total Pulls": 13090,
+      "Total Users": 300,
+      "Total Pulls": 13180,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.401%",
-        "Count": 707,
+        "Rate": "5.402%",
+        "Count": 712,
         "Median Pity": 12,
         "Won": "3%"
       },
       "5-Star": {
-        "Rate": "17.280%",
-        "Count": 2262
+        "Rate": "17.322%",
+        "Count": 2283
       },
-      "Total Obtained": 209,
-      "Featured 6-Star %": "5.401%"
+      "Total Obtained": 211,
+      "Featured 6-Star %": "5.402%"
     },
     "Express Delivery Issue": {
-      "Total Users": 1048,
-      "Total Pulls": 47000,
+      "Total Users": 1050,
+      "Total Pulls": 47070,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.934%",
-        "Count": 2319,
+        "Rate": "4.935%",
+        "Count": 2323,
         "Median Pity": 13,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "17.064%",
-        "Count": 8020
+        "Rate": "17.060%",
+        "Count": 8030
       },
-      "Total Obtained": 764,
-      "Featured 6-Star %": "4.934%"
+      "Total Obtained": 765,
+      "Featured 6-Star %": "4.935%"
     },
     "Smelting Forge Issue": {
-      "Total Users": 1381,
-      "Total Pulls": 94470,
+      "Total Users": 1382,
+      "Total Pulls": 94530,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.223%",
-        "Count": 4934,
+        "Rate": "5.222%",
+        "Count": 4936,
         "Median Pity": 14,
         "Won": "25%"
       },
       "5-Star": {
-        "Rate": "17.277%",
-        "Count": 16322
+        "Rate": "17.275%",
+        "Count": 16330
       },
       "Total Obtained": 14,
-      "Featured 6-Star %": "5.223%"
+      "Featured 6-Star %": "5.222%"
     }
   },
   "Standard Weapon": {
     "Solid Ice Issue": {
-      "Total Users": 545,
-      "Total Pulls": 21820,
+      "Total Users": 546,
+      "Total Pulls": 21850,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.940%",
+        "Rate": "4.934%",
         "Count": 1078,
         "Median Pity": 13,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.962%",
-        "Count": 3701
+        "Rate": "16.966%",
+        "Count": 3707
       },
       "Total Obtained": 362,
-      "Featured 6-Star %": "4.940%"
+      "Featured 6-Star %": "4.934%"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 1584,
-      "Total Pulls": 19835,
+      "Total Users": 1586,
+      "Total Pulls": 19855,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.250%",
-        "Count": 843,
+        "Rate": "4.251%",
+        "Count": 844,
         "Median Pity": 5,
         "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.753%",
-        "Count": 3323
+        "Rate": "16.762%",
+        "Count": 3328
       },
-      "Total Obtained": 207,
-      "Featured 6-Star %": "4.250%"
+      "Total Obtained": 208,
+      "Featured 6-Star %": "4.251%"
     },
     "Far Expedition Issue": {
-      "Total Users": 491,
-      "Total Pulls": 19755,
+      "Total Users": 492,
+      "Total Pulls": 19785,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.794%",
-        "Count": 947,
+        "Rate": "4.807%",
+        "Count": 951,
         "Median Pity": 13,
         "Won": "28%"
       },
       "5-Star": {
-        "Rate": "16.669%",
-        "Count": 3293
+        "Rate": "16.659%",
+        "Count": 3296
       },
-      "Total Obtained": 309,
-      "Featured 6-Star %": "4.794%"
+      "Total Obtained": 310,
+      "Featured 6-Star %": "4.807%"
     },
     "Rising Mount Issue": {
-      "Total Users": 181,
-      "Total Pulls": 6525,
+      "Total Users": 182,
+      "Total Pulls": 6535,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.950%",
+        "Rate": "4.943%",
         "Count": 323,
         "Median Pity": 12,
         "Won": "22%"
       },
       "5-Star": {
-        "Rate": "16.490%",
-        "Count": 1076
+        "Rate": "16.480%",
+        "Count": 1077
       },
       "Total Obtained": 87,
-      "Featured 6-Star %": "4.950%"
+      "Featured 6-Star %": "4.943%"
     },
     "Thunderous Peal Issue": {
-      "Total Users": 135,
-      "Total Pulls": 4800,
+      "Total Users": 136,
+      "Total Pulls": 4880,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.646%",
-        "Count": 223,
+        "Rate": "4.693%",
+        "Count": 229,
         "Median Pity": 12,
-        "Won": "25%"
+        "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.313%",
-        "Count": 783
+        "Rate": "16.455%",
+        "Count": 803
       },
-      "Total Obtained": 69,
-      "Featured 6-Star %": "4.646%"
+      "Total Obtained": 70,
+      "Featured 6-Star %": "4.693%"
     }
   }
 }
