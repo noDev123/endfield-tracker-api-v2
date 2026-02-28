@@ -10,7 +10,7 @@ Welcome to **EGP API**. The one and only Global Stats API in Arknights: Endfield
 
 Goyfield is a website that consists of global statistics and data, allowing users to easily view and track information all in one place. You can visit the official website at [Goyfield Official Site](Goyfield.moe). For more information or any inquiries, feel free to join their official [Discord server](https://discord.gg/zUMMBfUYsK).
 
-Special thanks to Goyfield for the provision and contribution to this project. They are constantly updating the data and maintaining which made this project possible. 
+Special thanks to Goyfield for the provision and contribution to this project. They are constantly updating and maintaining the data which made this project possible. 
 
 ## Common Questions 🤔
 
