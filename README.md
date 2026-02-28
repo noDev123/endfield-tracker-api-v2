@@ -14,8 +14,8 @@ Special thanks to Goyfield for the provision and contribution to this project. T
 
 ## Common Questions 🤔
 
-- **License**: There is no license to this project. This project is open-source. Any people can modify the program as they please. However please consider that I do not own the datas from Goyfield. I had personally talked to the owner of Goyfield to make this project. 
-- **Data**: The data updates approximately every 30~60minutes. Unfournately, I can't reduce it to less than 30 minutes becasue of rate limits.
-- **API**: The API link is [here](https://nodev123.github.io/endfield-tracker-api-v2/stats.json). JSON Format. 
+**License**: There is no license to this project. This project is open-source. Any people can modify the program as they please. However please consider that I do not own the datas from Goyfield. I had personally talked to the owner of Goyfield to make this project. 
+**Data**: The data updates approximately every 30~60minutes. Unfournately, I can't reduce it to less than 30 minutes becasue of rate limits.
+**API**: The API link is [here](https://nodev123.github.io/endfield-tracker-api-v2/stats.json). JSON Format. 
 
 
