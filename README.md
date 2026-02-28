@@ -20,5 +20,5 @@ Special thanks to Goyfield for the provision and contribution to this project. T
 
 - **API**: The API link is [here](https://nodev123.github.io/endfield-tracker-api-v2/stats.json). The API is in JSON Format. 
 
--**Discord**: I do not have a Discord server for this project. However you can join [Goyfield's Official Discord Server](https://discord.gg/zUMMBfUYsK). I'm there to help you.
+- **Discord**: I do not have a Discord server for this project. However you can join [Goyfield's Official Discord Server](https://discord.gg/zUMMBfUYsK). I'm there to help you.
 
