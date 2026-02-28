@@ -1,13 +1,1 @@
-[Standard Headhunting]
-  Total Users    : 1710
-  Total Pulls    : 181666
-  Oroberyl Spent : 90833000
-
-  6-Star
-    Rate         : N/A
-    Count        : N/A
-    Median Pity  : N/A
-
-  5-Startest
-    Rate         : N/A
-    Count        : N/A
+test
