@@ -30,7 +30,8 @@
         "Count": 3668
       },
       "Total Obtained": 331,
-      "Featured 6-Star %": "1.837%"
+      "Featured 6-Star %": "1.837%",
+      "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
       "Total Users": 1674,
@@ -47,7 +48,8 @@
         "Count": 16756
       },
       "Total Obtained": 30,
-      "Featured 6-Star %": "1.906%"
+      "Featured 6-Star %": "1.906%",
+      "Featured Image": "https://goyfield.moe/images/operators/preview/gilberta.png"
     },
     "Scars Of The Forge": {
       "Total Users": 1642,
@@ -64,7 +66,8 @@
         "Count": 21843
       },
       "Total Obtained": 44,
-      "Featured 6-Star %": "1.742%"
+      "Featured 6-Star %": "1.742%",
+      "Featured Image": "https://goyfield.moe/images/operators/preview/laevatain.png"
     }
   },
   "Event Weapon": {
@@ -83,7 +86,8 @@
         "Count": 2283
       },
       "Total Obtained": 211,
-      "Featured 6-Star %": "5.402%"
+      "Featured 6-Star %": "5.402%",
+      "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
       "Total Users": 1050,
@@ -100,7 +104,8 @@
         "Count": 8030
       },
       "Total Obtained": 765,
-      "Featured 6-Star %": "4.935%"
+      "Featured 6-Star %": "4.935%",
+      "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
       "Total Users": 1382,
@@ -117,7 +122,8 @@
         "Count": 16330
       },
       "Total Obtained": 14,
-      "Featured 6-Star %": "5.222%"
+      "Featured 6-Star %": "5.222%",
+      "Featured Image": "https://goyfield.moe/images/weapons/forgebornScathe.png"
     }
   },
   "Standard Weapon": {
@@ -136,7 +142,8 @@
         "Count": 3707
       },
       "Total Obtained": 362,
-      "Featured 6-Star %": "4.934%"
+      "Featured 6-Star %": "4.934%",
+      "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
       "Total Users": 1586,
@@ -153,7 +160,8 @@
         "Count": 3328
       },
       "Total Obtained": 208,
-      "Featured 6-Star %": "4.251%"
+      "Featured 6-Star %": "4.251%",
+      "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
       "Total Users": 492,
@@ -170,7 +178,8 @@
         "Count": 3296
       },
       "Total Obtained": 310,
-      "Featured 6-Star %": "4.807%"
+      "Featured 6-Star %": "4.807%",
+      "Featured Image": "https://goyfield.moe/images/weapons/neverRest.png"
     },
     "Rising Mount Issue": {
       "Total Users": 182,
@@ -187,7 +196,8 @@
         "Count": 1077
       },
       "Total Obtained": 87,
-      "Featured 6-Star %": "4.943%"
+      "Featured 6-Star %": "4.943%",
+      "Featured Image": "https://goyfield.moe/images/weapons/mountainBearer.png"
     },
     "Thunderous Peal Issue": {
       "Total Users": 136,
@@ -204,7 +214,8 @@
         "Count": 803
       },
       "Total Obtained": 70,
-      "Featured 6-Star %": "4.693%"
+      "Featured 6-Star %": "4.693%",
+      "Featured Image": "https://goyfield.moe/images/weapons/thunderberge.png"
     }
   }
 }
