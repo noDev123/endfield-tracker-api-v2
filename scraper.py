@@ -228,7 +228,7 @@ def scrape():
         browser.close()
 
         os.makedirs('docs', exist_ok=True)
-        with open('docs/stats.txt', 'w', encoding='utf-8') as f:
+        with open('docs/stats.json', 'w', encoding='utf-8') as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
         print("\nDone:")
         print(json.dumps(result, indent=2, ensure_ascii=False))
