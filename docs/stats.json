@@ -16,38 +16,38 @@
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 492,
-      "Total Pulls": 30698,
-      "Oroberyl Spent": 15349000,
+      "Total Users": 493,
+      "Total Pulls": 30749,
+      "Oroberyl Spent": 15374500,
       "6-Star": {
-        "Rate": "1.847%",
+        "Rate": "1.844%",
         "Count": 567,
         "Median Pity": 23,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "11.841%",
-        "Count": 3635
+        "Rate": "11.838%",
+        "Count": 3640
       },
       "Total Obtained": 329,
-      "Featured 6-Star %": "1.847%"
+      "Featured 6-Star %": "1.844%"
     },
     "The Floaty Messenger": {
       "Total Users": 1672,
-      "Total Pulls": 135512,
-      "Oroberyl Spent": 67756000,
+      "Total Pulls": 135544,
+      "Oroberyl Spent": 67772000,
       "6-Star": {
-        "Rate": "1.906%",
-        "Count": 2583,
+        "Rate": "1.907%",
+        "Count": 2585,
         "Median Pity": 30,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "12.347%",
-        "Count": 16732
+        "Rate": "12.349%",
+        "Count": 16738
       },
       "Total Obtained": 30,
-      "Featured 6-Star %": "1.906%"
+      "Featured 6-Star %": "1.907%"
     },
     "Scars Of The Forge": {
       "Total Users": 1640,
@@ -173,20 +173,20 @@
       "Featured 6-Star %": "4.794%"
     },
     "Rising Mount Issue": {
-      "Total Users": 180,
-      "Total Pulls": 6485,
+      "Total Users": 181,
+      "Total Pulls": 6525,
       "Oroberyl Spent": null,
       "6-Star": {
         "Rate": "4.950%",
-        "Count": 321,
+        "Count": 323,
         "Median Pity": 12,
-        "Won": "21%"
+        "Won": "22%"
       },
       "5-Star": {
-        "Rate": "16.453%",
-        "Count": 1067
+        "Rate": "16.490%",
+        "Count": 1076
       },
-      "Total Obtained": 86,
+      "Total Obtained": 87,
       "Featured 6-Star %": "4.950%"
     },
     "Thunderous Peal Issue": {
