@@ -18,6 +18,7 @@ Special thanks to Goyfield for the provision and contribution to this project. T
 
 - **Data**: The data updates approximately every 30~60minutes. Unfournately, I can't reduce it to less than 30 minutes becasue of rate limits.
 
-- **API**: The API link is [here](https://nodev123.github.io/endfield-tracker-api-v2/stats.json). JSON Format. 
+- **API**: The API link is [here](https://nodev123.github.io/endfield-tracker-api-v2/stats.json). The API is in JSON Format. 
 
+-**Discord**: I do not have a Discord server for this project. However you can join [Goyfield's Official Discord Server](https://discord.gg/zUMMBfUYsK). I'm there to help you.
 
