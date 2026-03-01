@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 1780,
-    "Total Pulls": 188925,
-    "Oroberyl Spent": 94462500,
+    "Total Pulls": 188927,
+    "Oroberyl Spent": 94463500,
     "6-Star": {
       "Rate": "1.575%",
       "Count": 2976,
@@ -17,20 +17,20 @@
   "Special Headhunting": {
     "Hues Of Passion": {
       "Total Users": 576,
-      "Total Pulls": 36621,
-      "Oroberyl Spent": 18310500,
+      "Total Pulls": 36653,
+      "Oroberyl Spent": 18326500,
       "6-Star": {
-        "Rate": "1.843%",
-        "Count": 675,
+        "Rate": "1.844%",
+        "Count": 676,
         "Median Pity": 23,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "11.827%",
-        "Count": 4331
+        "Rate": "11.824%",
+        "Count": 4334
       },
-      "Total Obtained": 396,
-      "Featured 6-Star %": "1.843%",
+      "Total Obtained": 397,
+      "Featured 6-Star %": "1.844%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
