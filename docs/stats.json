@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 1745,
-    "Total Pulls": 185356,
-    "Oroberyl Spent": 92678000,
+    "Total Pulls": 185366,
+    "Oroberyl Spent": 92683000,
     "6-Star": {
       "Rate": "1.575%",
       "Count": 2920,
@@ -11,23 +11,23 @@
     },
     "5-Star": {
       "Rate": "13.334%",
-      "Count": 24715
+      "Count": 24717
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 537,
-      "Total Pulls": 34046,
-      "Oroberyl Spent": 17023000,
+      "Total Users": 538,
+      "Total Pulls": 34096,
+      "Oroberyl Spent": 17048000,
       "6-Star": {
         "Rate": "1.842%",
-        "Count": 627,
+        "Count": 628,
         "Median Pity": 23,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "11.837%",
-        "Count": 4030
+        "Rate": "11.834%",
+        "Count": 4035
       },
       "Total Obtained": 369,
       "Featured 6-Star %": "1.842%",
@@ -72,21 +72,21 @@
   },
   "Event Weapon": {
     "Graffiti Issue": {
-      "Total Users": 325,
-      "Total Pulls": 14480,
+      "Total Users": 326,
+      "Total Pulls": 14510,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.380%",
-        "Count": 779,
+        "Rate": "5.382%",
+        "Count": 781,
         "Median Pity": 12,
         "Won": "5%"
       },
       "5-Star": {
-        "Rate": "17.293%",
-        "Count": 2504
+        "Rate": "17.292%",
+        "Count": 2509
       },
       "Total Obtained": 235,
-      "Featured 6-Star %": "5.380%",
+      "Featured 6-Star %": "5.382%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
