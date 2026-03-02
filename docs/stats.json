@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 1835,
-    "Total Pulls": 195075,
-    "Oroberyl Spent": 97537500,
+    "Total Pulls": 195089,
+    "Oroberyl Spent": 97544500,
     "6-Star": {
       "Rate": "1.575%",
       "Count": 3073,
@@ -11,23 +11,23 @@
     },
     "5-Star": {
       "Rate": "13.334%",
-      "Count": 26012
+      "Count": 26014
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 670,
-      "Total Pulls": 43150,
-      "Oroberyl Spent": 21575000,
+      "Total Users": 671,
+      "Total Pulls": 43220,
+      "Oroberyl Spent": 21610000,
       "6-Star": {
         "Rate": "1.849%",
-        "Count": 798,
+        "Count": 799,
         "Median Pity": 23,
         "Won": "53%"
       },
       "5-Star": {
         "Rate": "11.784%",
-        "Count": 5085
+        "Count": 5093
       },
       "Total Obtained": 474,
       "Featured 6-Star %": "1.849%",
@@ -35,20 +35,20 @@
     },
     "The Floaty Messenger": {
       "Total Users": 1792,
-      "Total Pulls": 145127,
-      "Oroberyl Spent": 72563500,
+      "Total Pulls": 145147,
+      "Oroberyl Spent": 72573500,
       "6-Star": {
-        "Rate": "1.887%",
+        "Rate": "1.886%",
         "Count": 2738,
         "Median Pity": 30,
         "Won": "50%"
       },
       "5-Star": {
-        "Rate": "12.316%",
+        "Rate": "12.314%",
         "Count": 17874
       },
       "Total Obtained": 30,
-      "Featured 6-Star %": "1.887%",
+      "Featured 6-Star %": "1.886%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/gilberta.png"
     },
     "Scars Of The Forge": {
