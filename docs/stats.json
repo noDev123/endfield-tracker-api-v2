@@ -1,54 +1,54 @@
 {
   "Standard Headhunting": {
-    "Total Users": 1842,
-    "Total Pulls": 195784,
-    "Oroberyl Spent": 97892000,
+    "Total Users": 1843,
+    "Total Pulls": 195934,
+    "Oroberyl Spent": 97967000,
     "6-Star": {
       "Rate": "1.575%",
-      "Count": 3083,
+      "Count": 3085,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.334%",
-      "Count": 26105
+      "Rate": "13.335%",
+      "Count": 26127
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 682,
-      "Total Pulls": 44240,
-      "Oroberyl Spent": 22120000,
+      "Total Users": 684,
+      "Total Pulls": 44376,
+      "Oroberyl Spent": 22188000,
       "6-Star": {
-        "Rate": "1.844%",
-        "Count": 816,
+        "Rate": "1.848%",
+        "Count": 820,
         "Median Pity": 23,
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.817%",
-        "Count": 5228
+        "Rate": "11.806%",
+        "Count": 5239
       },
-      "Total Obtained": 486,
-      "Featured 6-Star %": "1.844%",
+      "Total Obtained": 489,
+      "Featured 6-Star %": "1.848%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
       "Total Users": 1799,
-      "Total Pulls": 145592,
-      "Oroberyl Spent": 72796000,
+      "Total Pulls": 145614,
+      "Oroberyl Spent": 72807000,
       "6-Star": {
-        "Rate": "1.887%",
+        "Rate": "1.886%",
         "Count": 2747,
         "Median Pity": 30,
         "Won": "50%"
       },
       "5-Star": {
         "Rate": "12.309%",
-        "Count": 17921
+        "Count": 17924
       },
       "Total Obtained": 30,
-      "Featured 6-Star %": "1.887%",
+      "Featured 6-Star %": "1.886%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/gilberta.png"
     },
     "Scars Of The Forge": {
@@ -72,39 +72,39 @@
   },
   "Event Weapon": {
     "Graffiti Issue": {
-      "Total Users": 407,
-      "Total Pulls": 18420,
+      "Total Users": 409,
+      "Total Pulls": 18520,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.293%",
-        "Count": 975,
+        "Rate": "5.286%",
+        "Count": 979,
         "Median Pity": 12,
         "Won": "10%"
       },
       "5-Star": {
-        "Rate": "17.226%",
-        "Count": 3173
+        "Rate": "17.235%",
+        "Count": 3192
       },
-      "Total Obtained": 300,
-      "Featured 6-Star %": "5.293%",
+      "Total Obtained": 301,
+      "Featured 6-Star %": "5.286%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
-      "Total Users": 1128,
-      "Total Pulls": 51190,
+      "Total Users": 1129,
+      "Total Pulls": 51200,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.970%",
+        "Rate": "4.969%",
         "Count": 2544,
         "Median Pity": 13,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "17.085%",
-        "Count": 8746
+        "Rate": "17.084%",
+        "Count": 8747
       },
       "Total Obtained": 839,
-      "Featured 6-Star %": "4.970%",
+      "Featured 6-Star %": "4.969%",
       "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
