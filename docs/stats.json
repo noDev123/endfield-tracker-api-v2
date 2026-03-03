@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 1869,
-    "Total Pulls": 198879,
-    "Oroberyl Spent": 99439500,
+    "Total Pulls": 198880,
+    "Oroberyl Spent": 99440000,
     "6-Star": {
       "Rate": "1.574%",
       "Count": 3131,
@@ -16,21 +16,21 @@
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 721,
-      "Total Pulls": 46876,
-      "Oroberyl Spent": 23438000,
+      "Total Users": 722,
+      "Total Pulls": 46946,
+      "Oroberyl Spent": 23473000,
       "6-Star": {
-        "Rate": "1.835%",
-        "Count": 860,
+        "Rate": "1.834%",
+        "Count": 861,
         "Median Pity": 23,
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.799%",
-        "Count": 5531
+        "Rate": "11.801%",
+        "Count": 5540
       },
       "Total Obtained": 515,
-      "Featured 6-Star %": "1.835%",
+      "Featured 6-Star %": "1.834%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "banners.special_1_1_2": {
