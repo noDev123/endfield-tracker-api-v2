@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 1840,
-    "Total Pulls": 195628,
-    "Oroberyl Spent": 97814000,
+    "Total Pulls": 195638,
+    "Oroberyl Spent": 97819000,
     "6-Star": {
       "Rate": "1.574%",
       "Count": 3080,
@@ -11,26 +11,26 @@
     },
     "5-Star": {
       "Rate": "13.335%",
-      "Count": 26087
+      "Count": 26088
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 677,
-      "Total Pulls": 43967,
-      "Oroberyl Spent": 21983500,
+      "Total Users": 679,
+      "Total Pulls": 44061,
+      "Oroberyl Spent": 22030500,
       "6-Star": {
-        "Rate": "1.845%",
-        "Count": 811,
+        "Rate": "1.843%",
+        "Count": 812,
         "Median Pity": 23,
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.811%",
-        "Count": 5193
+        "Rate": "11.813%",
+        "Count": 5205
       },
-      "Total Obtained": 482,
-      "Featured 6-Star %": "1.845%",
+      "Total Obtained": 483,
+      "Featured 6-Star %": "1.843%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
@@ -72,21 +72,21 @@
   },
   "Event Weapon": {
     "Graffiti Issue": {
-      "Total Users": 403,
-      "Total Pulls": 18300,
+      "Total Users": 404,
+      "Total Pulls": 18380,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.295%",
-        "Count": 969,
+        "Rate": "5.288%",
+        "Count": 972,
         "Median Pity": 12,
         "Won": "10%"
       },
       "5-Star": {
-        "Rate": "17.230%",
-        "Count": 3153
+        "Rate": "17.225%",
+        "Count": 3166
       },
-      "Total Obtained": 296,
-      "Featured 6-Star %": "5.295%",
+      "Total Obtained": 297,
+      "Featured 6-Star %": "5.288%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
