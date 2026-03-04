@@ -1,11 +1,11 @@
 {
   "Standard Headhunting": {
     "Total Users": 1921,
-    "Total Pulls": 204448,
-    "Oroberyl Spent": 102224000,
+    "Total Pulls": 204450,
+    "Oroberyl Spent": 102225000,
     "6-Star": {
       "Rate": "1.575%",
-      "Count": 3220,
+      "Count": 3221,
       "Median Pity": 59,
       "Won": null
     },
@@ -91,7 +91,7 @@
     },
     "Express Delivery Issue": {
       "Total Users": 1189,
-      "Total Pulls": 54200,
+      "Total Pulls": 54210,
       "Oroberyl Spent": null,
       "6-Star": {
         "Rate": "4.970%",
@@ -101,7 +101,7 @@
       },
       "5-Star": {
         "Rate": "17.089%",
-        "Count": 9262
+        "Count": 9264
       },
       "Total Obtained": 883,
       "Featured 6-Star %": "4.970%",
