@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 1942,
-    "Total Pulls": 206775,
-    "Oroberyl Spent": 103387500,
+    "Total Pulls": 206776,
+    "Oroberyl Spent": 103388000,
     "6-Star": {
       "Rate": "1.573%",
       "Count": 3253,
@@ -11,14 +11,14 @@
     },
     "5-Star": {
       "Rate": "13.328%",
-      "Count": 27558
+      "Count": 27559
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
       "Total Users": 815,
-      "Total Pulls": 53155,
-      "Oroberyl Spent": 26577500,
+      "Total Pulls": 53159,
+      "Oroberyl Spent": 26579500,
       "6-Star": {
         "Rate": "1.836%",
         "Count": 976,
@@ -26,8 +26,8 @@
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.767%",
-        "Count": 6255
+        "Rate": "11.768%",
+        "Count": 6256
       },
       "Total Obtained": 588,
       "Featured 6-Star %": "1.836%",
