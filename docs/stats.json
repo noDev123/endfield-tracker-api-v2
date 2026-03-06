@@ -108,18 +108,18 @@
       "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
-      "Total Users": 1559,
-      "Total Pulls": 106770,
+      "Total Users": 1560,
+      "Total Pulls": 106830,
       "Oroberyl Spent": null,
       "6-Star": {
         "Rate": "5.234%",
-        "Count": 5588,
+        "Count": 5592,
         "Median Pity": 14,
         "Won": "25%"
       },
       "5-Star": {
-        "Rate": "17.262%",
-        "Count": 18431
+        "Rate": "17.260%",
+        "Count": 18439
       },
       "Total Obtained": 14,
       "Featured 6-Star %": "5.234%",
@@ -128,39 +128,39 @@
   },
   "Standard Weapon": {
     "Solid Ice Issue": {
-      "Total Users": 636,
-      "Total Pulls": 25150,
+      "Total Users": 637,
+      "Total Pulls": 25170,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.907%",
+        "Rate": "4.903%",
         "Count": 1234,
         "Median Pity": 13,
         "Won": "28%"
       },
       "5-Star": {
-        "Rate": "16.903%",
-        "Count": 4251
+        "Rate": "16.897%",
+        "Count": 4253
       },
       "Total Obtained": 421,
-      "Featured 6-Star %": "4.907%",
+      "Featured 6-Star %": "4.903%",
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 1811,
-      "Total Pulls": 22665,
+      "Total Users": 1812,
+      "Total Pulls": 22675,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.169%",
-        "Count": 945,
+        "Rate": "4.172%",
+        "Count": 946,
         "Median Pity": 5,
-        "Won": "25%"
+        "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.739%",
+        "Rate": "16.732%",
         "Count": 3794
       },
       "Total Obtained": 239,
-      "Featured 6-Star %": "4.169%",
+      "Featured 6-Star %": "4.172%",
       "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
