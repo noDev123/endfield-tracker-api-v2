@@ -1,24 +1,24 @@
 {
   "Standard Headhunting": {
     "Total Users": 1986,
-    "Total Pulls": 211795,
-    "Oroberyl Spent": 105897500,
+    "Total Pulls": 211825,
+    "Oroberyl Spent": 105912500,
     "6-Star": {
       "Rate": "1.573%",
-      "Count": 3331,
+      "Count": 3332,
       "Median Pity": 60,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.321%",
-      "Count": 28214
+      "Rate": "13.320%",
+      "Count": 28216
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
-      "Total Users": 873,
-      "Total Pulls": 56911,
-      "Oroberyl Spent": 28455500,
+      "Total Users": 874,
+      "Total Pulls": 56916,
+      "Oroberyl Spent": 28458000,
       "6-Star": {
         "Rate": "1.810%",
         "Count": 1030,
@@ -26,7 +26,7 @@
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.757%",
+        "Rate": "11.756%",
         "Count": 6691
       },
       "Total Obtained": 619,
@@ -35,8 +35,8 @@
     },
     "The Floaty Messenger": {
       "Total Users": 1937,
-      "Total Pulls": 157106,
-      "Oroberyl Spent": 78553000,
+      "Total Pulls": 157108,
+      "Oroberyl Spent": 78554000,
       "6-Star": {
         "Rate": "1.879%",
         "Count": 2952,
@@ -45,7 +45,7 @@
       },
       "5-Star": {
         "Rate": "12.278%",
-        "Count": 19289
+        "Count": 19290
       },
       "Total Obtained": 30,
       "Featured 6-Star %": "1.879%",
