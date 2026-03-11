@@ -1,35 +1,35 @@
 {
   "Standard Headhunting": {
     "Total Users": 2003,
-    "Total Pulls": 213916,
-    "Oroberyl Spent": 106958000,
+    "Total Pulls": 213933,
+    "Oroberyl Spent": 106966500,
     "6-Star": {
       "Rate": "1.572%",
-      "Count": 3363,
+      "Count": 3364,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.320%",
-      "Count": 28494
+      "Rate": "13.321%",
+      "Count": 28497
     }
   },
   "Special Headhunting": {
     "Hues Of Passion": {
       "Total Users": 892,
-      "Total Pulls": 58573,
-      "Oroberyl Spent": 29286500,
+      "Total Pulls": 58675,
+      "Oroberyl Spent": 29337500,
       "6-Star": {
         "Rate": "1.805%",
-        "Count": 1057,
+        "Count": 1059,
         "Median Pity": 24,
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.767%",
-        "Count": 6892
+        "Rate": "11.765%",
+        "Count": 6903
       },
-      "Total Obtained": 636,
+      "Total Obtained": 637,
       "Featured 6-Star %": "1.805%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
@@ -72,39 +72,39 @@
   },
   "Event Weapon": {
     "Graffiti Issue": {
-      "Total Users": 517,
-      "Total Pulls": 23095,
+      "Total Users": 518,
+      "Total Pulls": 23165,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.166%",
-        "Count": 1193,
+        "Rate": "5.154%",
+        "Count": 1194,
         "Median Pity": 13,
         "Won": "14%"
       },
       "5-Star": {
-        "Rate": "17.173%",
-        "Count": 3966
+        "Rate": "17.172%",
+        "Count": 3978
       },
       "Total Obtained": 367,
-      "Featured 6-Star %": "5.166%",
+      "Featured 6-Star %": "5.154%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
-      "Total Users": 1241,
-      "Total Pulls": 56580,
+      "Total Users": 1242,
+      "Total Pulls": 56620,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.972%",
-        "Count": 2813,
+        "Rate": "4.974%",
+        "Count": 2816,
         "Median Pity": 13,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "17.093%",
-        "Count": 9671
+        "Rate": "17.086%",
+        "Count": 9674
       },
-      "Total Obtained": 917,
-      "Featured 6-Star %": "4.972%",
+      "Total Obtained": 919,
+      "Featured 6-Star %": "4.974%",
       "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
