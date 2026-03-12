@@ -15,6 +15,24 @@
     }
   },
   "Special Headhunting": {
+    "banners.special_1_1_1": {
+      "Total Users": 1,
+      "Total Pulls": 40,
+      "Oroberyl Spent": 20000,
+      "6-Star": {
+        "Rate": "2.500%",
+        "Count": 1,
+        "Median Pity": 1,
+        "Won": null
+      },
+      "5-Star": {
+        "Rate": "5.000%",
+        "Count": 2
+      },
+      "Total Obtained": 0,
+      "Featured 6-Star %": "2.500%",
+      "Featured Image": null
+    },
     "Hues Of Passion": {
       "Total Users": 904,
       "Total Pulls": 59609,
@@ -31,7 +49,7 @@
       },
       "Total Obtained": 644,
       "Featured 6-Star %": "1.800%",
-      "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
+      "Featured Image": null
     },
     "The Floaty Messenger": {
       "Total Users": 1962,
@@ -49,7 +67,7 @@
       },
       "Total Obtained": 30,
       "Featured 6-Star %": "1.878%",
-      "Featured Image": "https://goyfield.moe/images/operators/preview/gilberta.png"
+      "Featured Image": null
     },
     "Scars Of The Forge": {
       "Total Users": 1915,
@@ -67,10 +85,28 @@
       },
       "Total Obtained": 44,
       "Featured 6-Star %": "1.735%",
-      "Featured Image": "https://goyfield.moe/images/operators/preview/laevatain.png"
+      "Featured Image": null
     }
   },
   "Event Weapon": {
+    "banners.weponbox_1_1_1": {
+      "Total Users": 1,
+      "Total Pulls": 30,
+      "Oroberyl Spent": null,
+      "6-Star": {
+        "Rate": "3.333%",
+        "Count": 1,
+        "Median Pity": 9,
+        "Won": null
+      },
+      "5-Star": {
+        "Rate": "13.333%",
+        "Count": 4
+      },
+      "Total Obtained": 0,
+      "Featured 6-Star %": "3.333%",
+      "Featured Image": "https://goyfield.moe/images/weapons/thermiteCutter.png"
+    },
     "Graffiti Issue": {
       "Total Users": 525,
       "Total Pulls": 23585,
