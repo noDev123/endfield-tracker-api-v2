@@ -1,42 +1,42 @@
 {
   "Standard Headhunting": {
-    "Total Users": 2164,
-    "Total Pulls": 233000,
-    "Oroberyl Spent": 116500000,
+    "Total Users": 2165,
+    "Total Pulls": 233122,
+    "Oroberyl Spent": 116561000,
     "6-Star": {
       "Rate": "1.572%",
-      "Count": 3662,
+      "Count": 3664,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
       "Rate": "13.333%",
-      "Count": 31067
+      "Count": 31082
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 219,
-      "Total Pulls": 15343,
-      "Oroberyl Spent": 7671500,
+      "Total Users": 220,
+      "Total Pulls": 15435,
+      "Oroberyl Spent": 7717500,
       "6-Star": {
-        "Rate": "2.079%",
-        "Count": 319,
+        "Rate": "2.073%",
+        "Count": 320,
         "Median Pity": 25,
-        "Won": "48%"
+        "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.471%",
-        "Count": 1760
+        "Rate": "11.467%",
+        "Count": 1770
       },
-      "Total Obtained": 178,
-      "Featured 6-Star %": "2.079%",
+      "Total Obtained": 179,
+      "Featured 6-Star %": "2.073%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
-      "Total Users": 1071,
-      "Total Pulls": 69549,
-      "Oroberyl Spent": 34774500,
+      "Total Users": 1072,
+      "Total Pulls": 69554,
+      "Oroberyl Spent": 34777000,
       "6-Star": {
         "Rate": "1.754%",
         "Count": 1220,
@@ -52,9 +52,9 @@
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
-      "Total Users": 2109,
-      "Total Pulls": 171758,
-      "Oroberyl Spent": 85879000,
+      "Total Users": 2110,
+      "Total Pulls": 171763,
+      "Oroberyl Spent": 85881500,
       "6-Star": {
         "Rate": "1.867%",
         "Count": 3207,
@@ -63,16 +63,16 @@
       },
       "5-Star": {
         "Rate": "12.222%",
-        "Count": 20992
+        "Count": 20993
       },
       "Total Obtained": 30,
       "Featured 6-Star %": "1.867%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/gilberta.png"
     },
     "Scars Of The Forge": {
-      "Total Users": 2057,
-      "Total Pulls": 214109,
-      "Oroberyl Spent": 107054500,
+      "Total Users": 2058,
+      "Total Pulls": 214114,
+      "Oroberyl Spent": 107057000,
       "6-Star": {
         "Rate": "1.729%",
         "Count": 3703,
@@ -90,21 +90,21 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 127,
-      "Total Pulls": 5620,
+      "Total Users": 128,
+      "Total Pulls": 5660,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.463%",
-        "Count": 307,
+        "Rate": "5.442%",
+        "Count": 308,
         "Median Pity": 11,
         "Won": "25%"
       },
       "5-Star": {
-        "Rate": "17.153%",
-        "Count": 964
+        "Rate": "17.120%",
+        "Count": 969
       },
-      "Total Obtained": 91,
-      "Featured 6-Star %": "5.463%",
+      "Total Obtained": 92,
+      "Featured 6-Star %": "5.442%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
@@ -182,21 +182,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 2013,
-      "Total Pulls": 25175,
+      "Total Users": 2014,
+      "Total Pulls": 25185,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.147%",
+        "Rate": "4.145%",
         "Count": 1044,
         "Median Pity": 5,
         "Won": "25%"
       },
       "5-Star": {
-        "Rate": "16.683%",
-        "Count": 4200
+        "Rate": "16.681%",
+        "Count": 4201
       },
       "Total Obtained": 265,
-      "Featured 6-Star %": "4.147%",
+      "Featured 6-Star %": "4.145%",
       "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
