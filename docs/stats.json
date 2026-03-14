@@ -1,42 +1,42 @@
 {
   "Standard Headhunting": {
     "Total Users": 2159,
-    "Total Pulls": 232360,
-    "Oroberyl Spent": 116180000,
+    "Total Pulls": 232372,
+    "Oroberyl Spent": 116186000,
     "6-Star": {
-      "Rate": "1.573%",
+      "Rate": "1.572%",
       "Count": 3654,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.334%",
-      "Count": 30984
+      "Rate": "13.335%",
+      "Count": 30986
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 212,
-      "Total Pulls": 14860,
-      "Oroberyl Spent": 7430000,
+      "Total Users": 213,
+      "Total Pulls": 14902,
+      "Oroberyl Spent": 7451000,
       "6-Star": {
-        "Rate": "2.093%",
+        "Rate": "2.087%",
         "Count": 311,
         "Median Pity": 25,
         "Won": "48%"
       },
       "5-Star": {
-        "Rate": "11.474%",
-        "Count": 1705
+        "Rate": "11.462%",
+        "Count": 1708
       },
       "Total Obtained": 172,
-      "Featured 6-Star %": "2.093%",
+      "Featured 6-Star %": "2.087%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
       "Total Users": 1065,
-      "Total Pulls": 69085,
-      "Oroberyl Spent": 34542500,
+      "Total Pulls": 69091,
+      "Oroberyl Spent": 34545500,
       "6-Star": {
         "Rate": "1.756%",
         "Count": 1213,
@@ -44,7 +44,7 @@
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.819%",
+        "Rate": "11.818%",
         "Count": 8165
       },
       "Total Obtained": 727,
@@ -91,20 +91,20 @@
   "Event Weapon": {
     "Brigand's Calling": {
       "Total Users": 123,
-      "Total Pulls": 5410,
+      "Total Pulls": 5440,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.490%",
-        "Count": 297,
+        "Rate": "5.478%",
+        "Count": 298,
         "Median Pity": 11,
         "Won": "25%"
       },
       "5-Star": {
-        "Rate": "17.190%",
-        "Count": 930
+        "Rate": "17.188%",
+        "Count": 935
       },
       "Total Obtained": 88,
-      "Featured 6-Star %": "5.490%",
+      "Featured 6-Star %": "5.478%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
