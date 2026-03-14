@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2131,
-    "Total Pulls": 228796,
-    "Oroberyl Spent": 114398000,
+    "Total Pulls": 228825,
+    "Oroberyl Spent": 114412500,
     "6-Star": {
       "Rate": "1.573%",
       "Count": 3599,
@@ -10,33 +10,33 @@
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.325%",
-      "Count": 30488
+      "Rate": "13.326%",
+      "Count": 30493
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 165,
-      "Total Pulls": 10496,
-      "Oroberyl Spent": 5248000,
+      "Total Users": 167,
+      "Total Pulls": 10716,
+      "Oroberyl Spent": 5358000,
       "6-Star": {
-        "Rate": "2.020%",
-        "Count": 212,
+        "Rate": "2.034%",
+        "Count": 218,
         "Median Pity": 23,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "11.233%",
-        "Count": 1179
+        "Rate": "11.282%",
+        "Count": 1209
       },
-      "Total Obtained": 122,
-      "Featured 6-Star %": "2.020%",
+      "Total Obtained": 126,
+      "Featured 6-Star %": "2.034%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
-      "Total Users": 1035,
-      "Total Pulls": 67126,
-      "Oroberyl Spent": 33563000,
+      "Total Users": 1036,
+      "Total Pulls": 67156,
+      "Oroberyl Spent": 33578000,
       "6-Star": {
         "Rate": "1.765%",
         "Count": 1185,
@@ -45,7 +45,7 @@
       },
       "5-Star": {
         "Rate": "11.826%",
-        "Count": 7938
+        "Count": 7942
       },
       "Total Obtained": 711,
       "Featured 6-Star %": "1.765%",
@@ -53,8 +53,8 @@
     },
     "The Floaty Messenger": {
       "Total Users": 2076,
-      "Total Pulls": 168823,
-      "Oroberyl Spent": 84411500,
+      "Total Pulls": 168825,
+      "Oroberyl Spent": 84412500,
       "6-Star": {
         "Rate": "1.866%",
         "Count": 3151,
@@ -90,57 +90,57 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 83,
-      "Total Pulls": 3400,
+      "Total Users": 85,
+      "Total Pulls": 3500,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.588%",
-        "Count": 190,
+        "Rate": "5.629%",
+        "Count": 197,
         "Median Pity": 11,
-        "Won": "28%"
+        "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.824%",
-        "Count": 572
+        "Rate": "16.714%",
+        "Count": 585
       },
-      "Total Obtained": 61,
-      "Featured 6-Star %": "5.588%",
+      "Total Obtained": 62,
+      "Featured 6-Star %": "5.629%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
       "Total Users": 582,
-      "Total Pulls": 26390,
+      "Total Pulls": 26400,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.161%",
-        "Count": 1362,
+        "Rate": "5.163%",
+        "Count": 1363,
         "Median Pity": 13,
         "Won": "15%"
       },
       "5-Star": {
-        "Rate": "17.097%",
-        "Count": 4512
+        "Rate": "17.095%",
+        "Count": 4513
       },
       "Total Obtained": 422,
-      "Featured 6-Star %": "5.161%",
+      "Featured 6-Star %": "5.163%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
-      "Total Users": 1322,
-      "Total Pulls": 60870,
+      "Total Users": 1323,
+      "Total Pulls": 60920,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.007%",
-        "Count": 3048,
+        "Rate": "5.005%",
+        "Count": 3049,
         "Median Pity": 14,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "17.099%",
-        "Count": 10408
+        "Rate": "17.098%",
+        "Count": 10416
       },
       "Total Obtained": 14,
-      "Featured 6-Star %": "5.007%",
+      "Featured 6-Star %": "5.005%",
       "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
