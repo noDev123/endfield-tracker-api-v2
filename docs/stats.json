@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2181,
-    "Total Pulls": 235160,
-    "Oroberyl Spent": 117580000,
+    "Total Pulls": 235165,
+    "Oroberyl Spent": 117582500,
     "6-Star": {
       "Rate": "1.571%",
       "Count": 3695,
@@ -10,27 +10,27 @@
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.333%",
+      "Rate": "13.332%",
       "Count": 31353
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 242,
-      "Total Pulls": 17061,
-      "Oroberyl Spent": 8530500,
+      "Total Pulls": 17099,
+      "Oroberyl Spent": 8549500,
       "6-Star": {
-        "Rate": "2.040%",
-        "Count": 348,
+        "Rate": "2.047%",
+        "Count": 350,
         "Median Pity": 26,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.465%",
-        "Count": 1956
+        "Rate": "11.469%",
+        "Count": 1961
       },
-      "Total Obtained": 198,
-      "Featured 6-Star %": "2.040%",
+      "Total Obtained": 199,
+      "Featured 6-Star %": "2.047%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -91,35 +91,35 @@
   "Event Weapon": {
     "Brigand's Calling": {
       "Total Users": 141,
-      "Total Pulls": 6110,
+      "Total Pulls": 6180,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.434%",
-        "Count": 332,
+        "Rate": "5.485%",
+        "Count": 339,
         "Median Pity": 11,
         "Won": "25%"
       },
       "5-Star": {
-        "Rate": "17.185%",
-        "Count": 1050
+        "Rate": "17.168%",
+        "Count": 1061
       },
-      "Total Obtained": 100,
-      "Featured 6-Star %": "5.434%",
+      "Total Obtained": 102,
+      "Featured 6-Star %": "5.485%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
       "Total Users": 615,
-      "Total Pulls": 28310,
+      "Total Pulls": 28330,
       "Oroberyl Spent": null,
       "6-Star": {
         "Rate": "5.157%",
-        "Count": 1460,
+        "Count": 1461,
         "Median Pity": 13,
         "Won": "16%"
       },
       "5-Star": {
-        "Rate": "17.118%",
-        "Count": 4846
+        "Rate": "17.113%",
+        "Count": 4848
       },
       "Total Obtained": 451,
       "Featured 6-Star %": "5.157%",
