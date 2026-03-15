@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2200,
-    "Total Pulls": 237390,
-    "Oroberyl Spent": 118695000,
+    "Total Pulls": 237394,
+    "Oroberyl Spent": 118697000,
     "6-Star": {
       "Rate": "1.569%",
       "Count": 3724,
@@ -11,26 +11,26 @@
     },
     "5-Star": {
       "Rate": "13.329%",
-      "Count": 31642
+      "Count": 31643
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 265,
-      "Total Pulls": 19254,
-      "Oroberyl Spent": 9627000,
+      "Total Pulls": 19267,
+      "Oroberyl Spent": 9633500,
       "6-Star": {
-        "Rate": "2.010%",
-        "Count": 387,
+        "Rate": "2.014%",
+        "Count": 388,
         "Median Pity": 28,
         "Won": "50%"
       },
       "5-Star": {
-        "Rate": "11.509%",
-        "Count": 2216
+        "Rate": "11.507%",
+        "Count": 2217
       },
       "Total Obtained": 221,
-      "Featured 6-Star %": "2.010%",
+      "Featured 6-Star %": "2.014%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -201,20 +201,20 @@
     },
     "Far Expedition Issue": {
       "Total Users": 649,
-      "Total Pulls": 26435,
+      "Total Pulls": 26445,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.861%",
+        "Rate": "4.859%",
         "Count": 1285,
         "Median Pity": 13,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.645%",
-        "Count": 4400
+        "Rate": "16.642%",
+        "Count": 4401
       },
       "Total Obtained": 413,
-      "Featured 6-Star %": "4.861%",
+      "Featured 6-Star %": "4.859%",
       "Featured Image": "https://goyfield.moe/images/weapons/neverRest.png"
     },
     "Rising Mount Issue": {
