@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
-    "Total Users": 2199,
-    "Total Pulls": 237347,
-    "Oroberyl Spent": 118673500,
+    "Total Users": 2200,
+    "Total Pulls": 237390,
+    "Oroberyl Spent": 118695000,
     "6-Star": {
       "Rate": "1.569%",
       "Count": 3724,
@@ -11,32 +11,32 @@
     },
     "5-Star": {
       "Rate": "13.329%",
-      "Count": 31637
+      "Count": 31642
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 264,
-      "Total Pulls": 19202,
-      "Oroberyl Spent": 9601000,
+      "Total Users": 265,
+      "Total Pulls": 19254,
+      "Oroberyl Spent": 9627000,
       "6-Star": {
         "Rate": "2.010%",
-        "Count": 386,
+        "Count": 387,
         "Median Pity": 28,
         "Won": "50%"
       },
       "5-Star": {
         "Rate": "11.509%",
-        "Count": 2210
+        "Count": 2216
       },
-      "Total Obtained": 220,
+      "Total Obtained": 221,
       "Featured 6-Star %": "2.010%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
-      "Total Users": 1110,
-      "Total Pulls": 72121,
-      "Oroberyl Spent": 36060500,
+      "Total Users": 1111,
+      "Total Pulls": 72122,
+      "Oroberyl Spent": 36061000,
       "6-Star": {
         "Rate": "1.760%",
         "Count": 1269,
@@ -90,21 +90,21 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 155,
-      "Total Pulls": 6660,
+      "Total Users": 156,
+      "Total Pulls": 6700,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.435%",
-        "Count": 362,
+        "Rate": "5.463%",
+        "Count": 366,
         "Median Pity": 11,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "17.027%",
-        "Count": 1134
+        "Rate": "17.075%",
+        "Count": 1144
       },
-      "Total Obtained": 115,
-      "Featured 6-Star %": "5.435%",
+      "Total Obtained": 116,
+      "Featured 6-Star %": "5.463%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
@@ -182,21 +182,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 2047,
-      "Total Pulls": 25755,
+      "Total Users": 2048,
+      "Total Pulls": 25765,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.170%",
-        "Count": 1074,
+        "Rate": "4.172%",
+        "Count": 1075,
         "Median Pity": 5,
         "Won": "25%"
       },
       "5-Star": {
-        "Rate": "16.649%",
+        "Rate": "16.643%",
         "Count": 4288
       },
       "Total Obtained": 276,
-      "Featured 6-Star %": "4.170%",
+      "Featured 6-Star %": "4.172%",
       "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
