@@ -1,36 +1,36 @@
 {
   "Standard Headhunting": {
     "Total Users": 2226,
-    "Total Pulls": 240534,
-    "Oroberyl Spent": 120267000,
+    "Total Pulls": 240546,
+    "Oroberyl Spent": 120273000,
     "6-Star": {
-      "Rate": "1.567%",
+      "Rate": "1.566%",
       "Count": 3768,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
       "Rate": "13.331%",
-      "Count": 32065
+      "Count": 32066
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 300,
-      "Total Pulls": 22270,
-      "Oroberyl Spent": 11135000,
+      "Total Users": 301,
+      "Total Pulls": 22360,
+      "Oroberyl Spent": 11180000,
       "6-Star": {
-        "Rate": "1.998%",
-        "Count": 445,
+        "Rate": "1.995%",
+        "Count": 446,
         "Median Pity": 28,
-        "Won": "50%"
+        "Won": "51%"
       },
       "5-Star": {
-        "Rate": "11.581%",
-        "Count": 2579
+        "Rate": "11.592%",
+        "Count": 2592
       },
-      "Total Obtained": 257,
-      "Featured 6-Star %": "1.998%",
+      "Total Obtained": 259,
+      "Featured 6-Star %": "1.995%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -90,21 +90,21 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 179,
-      "Total Pulls": 7890,
+      "Total Users": 180,
+      "Total Pulls": 7920,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.399%",
-        "Count": 426,
+        "Rate": "5.404%",
+        "Count": 428,
         "Median Pity": 12,
-        "Won": "26%"
+        "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.857%",
-        "Count": 1330
+        "Rate": "16.907%",
+        "Count": 1339
       },
-      "Total Obtained": 133,
-      "Featured 6-Star %": "5.399%",
+      "Total Obtained": 134,
+      "Featured 6-Star %": "5.404%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
@@ -164,21 +164,21 @@
   },
   "Standard Weapon": {
     "Solid Ice Issue": {
-      "Total Users": 742,
-      "Total Pulls": 29890,
+      "Total Users": 743,
+      "Total Pulls": 29930,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.995%",
-        "Count": 1493,
+        "Rate": "4.992%",
+        "Count": 1494,
         "Median Pity": 12,
         "Won": "28%"
       },
       "5-Star": {
-        "Rate": "16.879%",
-        "Count": 5045
+        "Rate": "16.896%",
+        "Count": 5057
       },
-      "Total Obtained": 503,
-      "Featured 6-Star %": "4.995%",
+      "Total Obtained": 504,
+      "Featured 6-Star %": "4.992%",
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
