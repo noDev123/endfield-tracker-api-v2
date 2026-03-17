@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2226,
-    "Total Pulls": 240520,
-    "Oroberyl Spent": 120260000,
+    "Total Pulls": 240521,
+    "Oroberyl Spent": 120260500,
     "6-Star": {
       "Rate": "1.566%",
       "Count": 3767,
@@ -10,27 +10,27 @@
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.330%",
-      "Count": 32062
+      "Rate": "13.331%",
+      "Count": 32063
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 299,
-      "Total Pulls": 22245,
-      "Oroberyl Spent": 11122500,
+      "Total Pulls": 22260,
+      "Oroberyl Spent": 11130000,
       "6-Star": {
-        "Rate": "1.991%",
-        "Count": 443,
+        "Rate": "1.995%",
+        "Count": 444,
         "Median Pity": 28,
         "Won": "51%"
       },
       "5-Star": {
-        "Rate": "11.576%",
-        "Count": 2575
+        "Rate": "11.572%",
+        "Count": 2576
       },
-      "Total Obtained": 256,
-      "Featured 6-Star %": "1.991%",
+      "Total Obtained": 257,
+      "Featured 6-Star %": "1.995%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -164,21 +164,21 @@
   },
   "Standard Weapon": {
     "Solid Ice Issue": {
-      "Total Users": 741,
-      "Total Pulls": 29820,
+      "Total Users": 742,
+      "Total Pulls": 29890,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.990%",
-        "Count": 1488,
+        "Rate": "4.995%",
+        "Count": 1493,
         "Median Pity": 12,
         "Won": "28%"
       },
       "5-Star": {
-        "Rate": "16.858%",
-        "Count": 5027
+        "Rate": "16.879%",
+        "Count": 5045
       },
-      "Total Obtained": 502,
-      "Featured 6-Star %": "4.990%",
+      "Total Obtained": 503,
+      "Featured 6-Star %": "4.995%",
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
