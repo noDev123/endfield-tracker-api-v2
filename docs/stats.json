@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2257,
-    "Total Pulls": 244342,
-    "Oroberyl Spent": 122171000,
+    "Total Pulls": 244344,
+    "Oroberyl Spent": 122172000,
     "6-Star": {
       "Rate": "1.566%",
       "Count": 3826,
@@ -10,27 +10,27 @@
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.332%",
-      "Count": 32576
+      "Rate": "13.333%",
+      "Count": 32578
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 338,
-      "Total Pulls": 25446,
-      "Oroberyl Spent": 12723000,
+      "Total Pulls": 25462,
+      "Oroberyl Spent": 12731000,
       "6-Star": {
-        "Rate": "1.985%",
+        "Rate": "1.983%",
         "Count": 505,
         "Median Pity": 29,
         "Won": "48%"
       },
       "5-Star": {
-        "Rate": "11.660%",
-        "Count": 2967
+        "Rate": "11.657%",
+        "Count": 2968
       },
       "Total Obtained": 285,
-      "Featured 6-Star %": "1.985%",
+      "Featured 6-Star %": "1.983%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -91,38 +91,38 @@
   "Event Weapon": {
     "Brigand's Calling": {
       "Total Users": 205,
-      "Total Pulls": 8990,
+      "Total Pulls": 9000,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.339%",
-        "Count": 480,
+        "Rate": "5.344%",
+        "Count": 481,
         "Median Pity": 12,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "16.963%",
-        "Count": 1525
+        "Rate": "16.967%",
+        "Count": 1527
       },
       "Total Obtained": 148,
-      "Featured 6-Star %": "5.339%",
+      "Featured 6-Star %": "5.344%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
       "Total Users": 663,
-      "Total Pulls": 30390,
+      "Total Pulls": 30400,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.156%",
-        "Count": 1567,
+        "Rate": "5.158%",
+        "Count": 1568,
         "Median Pity": 13,
         "Won": "17%"
       },
       "5-Star": {
-        "Rate": "17.131%",
-        "Count": 5206
+        "Rate": "17.128%",
+        "Count": 5207
       },
       "Total Obtained": 485,
-      "Featured 6-Star %": "5.156%",
+      "Featured 6-Star %": "5.158%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
