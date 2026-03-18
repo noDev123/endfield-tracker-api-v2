@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2257,
-    "Total Pulls": 244344,
-    "Oroberyl Spent": 122172000,
+    "Total Pulls": 244345,
+    "Oroberyl Spent": 122172500,
     "6-Star": {
       "Rate": "1.566%",
       "Count": 3826,
@@ -17,20 +17,20 @@
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 338,
-      "Total Pulls": 25462,
-      "Oroberyl Spent": 12731000,
+      "Total Pulls": 25487,
+      "Oroberyl Spent": 12743500,
       "6-Star": {
-        "Rate": "1.983%",
-        "Count": 505,
+        "Rate": "1.985%",
+        "Count": 506,
         "Median Pity": 29,
         "Won": "48%"
       },
       "5-Star": {
-        "Rate": "11.657%",
-        "Count": 2968
+        "Rate": "11.665%",
+        "Count": 2973
       },
-      "Total Obtained": 285,
-      "Featured 6-Star %": "1.983%",
+      "Total Obtained": 286,
+      "Featured 6-Star %": "1.985%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -219,17 +219,17 @@
     },
     "Rising Mount Issue": {
       "Total Users": 258,
-      "Total Pulls": 9415,
+      "Total Pulls": 9435,
       "Oroberyl Spent": null,
       "6-Star": {
         "Rate": "4.918%",
-        "Count": 463,
+        "Count": 464,
         "Median Pity": 12,
         "Won": "22%"
       },
       "5-Star": {
-        "Rate": "16.729%",
-        "Count": 1575
+        "Rate": "16.714%",
+        "Count": 1577
       },
       "Total Obtained": 128,
       "Featured 6-Star %": "4.918%",
