@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2256,
-    "Total Pulls": 244248,
-    "Oroberyl Spent": 122124000,
+    "Total Pulls": 244257,
+    "Oroberyl Spent": 122128500,
     "6-Star": {
       "Rate": "1.566%",
       "Count": 3824,
@@ -11,44 +11,44 @@
     },
     "5-Star": {
       "Rate": "13.333%",
-      "Count": 32566
+      "Count": 32567
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 336,
-      "Total Pulls": 25331,
-      "Oroberyl Spent": 12665500,
+      "Total Users": 337,
+      "Total Pulls": 25376,
+      "Oroberyl Spent": 12688000,
       "6-Star": {
         "Rate": "1.986%",
-        "Count": 503,
+        "Count": 504,
         "Median Pity": 28,
         "Won": "48%"
       },
       "5-Star": {
-        "Rate": "11.666%",
-        "Count": 2955
+        "Rate": "11.661%",
+        "Count": 2959
       },
-      "Total Obtained": 284,
+      "Total Obtained": 285,
       "Featured 6-Star %": "1.986%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
-      "Total Users": 1171,
-      "Total Pulls": 76337,
-      "Oroberyl Spent": 38168500,
+      "Total Users": 1172,
+      "Total Pulls": 76377,
+      "Oroberyl Spent": 38188500,
       "6-Star": {
-        "Rate": "1.750%",
+        "Rate": "1.749%",
         "Count": 1336,
         "Median Pity": 25,
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.874%",
-        "Count": 9064
+        "Rate": "11.873%",
+        "Count": 9068
       },
       "Total Obtained": 794,
-      "Featured 6-Star %": "1.750%",
+      "Featured 6-Star %": "1.749%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
@@ -91,20 +91,20 @@
   "Event Weapon": {
     "Brigand's Calling": {
       "Total Users": 205,
-      "Total Pulls": 8970,
+      "Total Pulls": 8980,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.340%",
-        "Count": 479,
+        "Rate": "5.345%",
+        "Count": 480,
         "Median Pity": 12,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "16.968%",
-        "Count": 1522
+        "Rate": "16.971%",
+        "Count": 1524
       },
-      "Total Obtained": 147,
-      "Featured 6-Star %": "5.340%",
+      "Total Obtained": 148,
+      "Featured 6-Star %": "5.345%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
@@ -201,20 +201,20 @@
     },
     "Far Expedition Issue": {
       "Total Users": 658,
-      "Total Pulls": 26855,
+      "Total Pulls": 26875,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.859%",
+        "Rate": "4.856%",
         "Count": 1305,
         "Median Pity": 13,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.664%",
-        "Count": 4475
+        "Rate": "16.662%",
+        "Count": 4478
       },
       "Total Obtained": 420,
-      "Featured 6-Star %": "4.859%",
+      "Featured 6-Star %": "4.856%",
       "Featured Image": "https://goyfield.moe/images/weapons/neverRest.png"
     },
     "Rising Mount Issue": {
