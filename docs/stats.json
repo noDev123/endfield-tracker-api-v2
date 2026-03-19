@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2269,
-    "Total Pulls": 245873,
-    "Oroberyl Spent": 122936500,
+    "Total Pulls": 245884,
+    "Oroberyl Spent": 122942000,
     "6-Star": {
       "Rate": "1.564%",
       "Count": 3846,
@@ -11,44 +11,44 @@
     },
     "5-Star": {
       "Rate": "13.334%",
-      "Count": 32785
+      "Count": 32787
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 354,
-      "Total Pulls": 26794,
-      "Oroberyl Spent": 13397000,
+      "Total Users": 355,
+      "Total Pulls": 26799,
+      "Oroberyl Spent": 13399500,
       "6-Star": {
-        "Rate": "1.986%",
+        "Rate": "1.985%",
         "Count": 532,
         "Median Pity": 28,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.708%",
-        "Count": 3137
+        "Rate": "11.709%",
+        "Count": 3138
       },
       "Total Obtained": 303,
-      "Featured 6-Star %": "1.986%",
+      "Featured 6-Star %": "1.985%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
-      "Total Users": 1185,
-      "Total Pulls": 77247,
-      "Oroberyl Spent": 38623500,
+      "Total Users": 1186,
+      "Total Pulls": 77267,
+      "Oroberyl Spent": 38633500,
       "6-Star": {
-        "Rate": "1.745%",
-        "Count": 1348,
+        "Rate": "1.746%",
+        "Count": 1349,
         "Median Pity": 25,
         "Won": "53%"
       },
       "5-Star": {
-        "Rate": "11.875%",
-        "Count": 9173
+        "Rate": "11.877%",
+        "Count": 9177
       },
       "Total Obtained": 802,
-      "Featured 6-Star %": "1.745%",
+      "Featured 6-Star %": "1.746%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
