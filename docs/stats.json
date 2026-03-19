@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2266,
-    "Total Pulls": 245489,
-    "Oroberyl Spent": 122744500,
+    "Total Pulls": 245492,
+    "Oroberyl Spent": 122746000,
     "6-Star": {
       "Rate": "1.564%",
       "Count": 3839,
@@ -11,26 +11,26 @@
     },
     "5-Star": {
       "Rate": "13.335%",
-      "Count": 32735
+      "Count": 32736
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 349,
-      "Total Pulls": 26265,
-      "Oroberyl Spent": 13132500,
+      "Total Users": 350,
+      "Total Pulls": 26392,
+      "Oroberyl Spent": 13196000,
       "6-Star": {
-        "Rate": "1.984%",
-        "Count": 521,
+        "Rate": "1.985%",
+        "Count": 524,
         "Median Pity": 28,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.662%",
-        "Count": 3063
+        "Rate": "11.670%",
+        "Count": 3080
       },
-      "Total Obtained": 295,
-      "Featured 6-Star %": "1.984%",
+      "Total Obtained": 297,
+      "Featured 6-Star %": "1.985%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -90,39 +90,39 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 210,
-      "Total Pulls": 9230,
+      "Total Users": 211,
+      "Total Pulls": 9240,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.309%",
-        "Count": 490,
+        "Rate": "5.314%",
+        "Count": 491,
         "Median Pity": 12,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "16.977%",
-        "Count": 1567
+        "Rate": "16.970%",
+        "Count": 1568
       },
       "Total Obtained": 152,
-      "Featured 6-Star %": "5.309%",
+      "Featured 6-Star %": "5.314%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
-      "Total Users": 669,
-      "Total Pulls": 30910,
+      "Total Users": 670,
+      "Total Pulls": 30950,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.157%",
-        "Count": 1594,
+        "Rate": "5.153%",
+        "Count": 1595,
         "Median Pity": 13,
         "Won": "17%"
       },
       "5-Star": {
-        "Rate": "17.153%",
-        "Count": 5302
+        "Rate": "17.157%",
+        "Count": 5310
       },
-      "Total Obtained": 491,
-      "Featured 6-Star %": "5.157%",
+      "Total Obtained": 492,
+      "Featured 6-Star %": "5.153%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
