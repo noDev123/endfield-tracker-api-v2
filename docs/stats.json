@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2269,
-    "Total Pulls": 245870,
-    "Oroberyl Spent": 122935000,
+    "Total Pulls": 245873,
+    "Oroberyl Spent": 122936500,
     "6-Star": {
       "Rate": "1.564%",
       "Count": 3846,
@@ -11,14 +11,14 @@
     },
     "5-Star": {
       "Rate": "13.334%",
-      "Count": 32784
+      "Count": 32785
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 354,
-      "Total Pulls": 26792,
-      "Oroberyl Spent": 13396000,
+      "Total Pulls": 26794,
+      "Oroberyl Spent": 13397000,
       "6-Star": {
         "Rate": "1.986%",
         "Count": 532,
@@ -26,7 +26,7 @@
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.709%",
+        "Rate": "11.708%",
         "Count": 3137
       },
       "Total Obtained": 303,
