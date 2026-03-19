@@ -17,20 +17,20 @@
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 339,
-      "Total Pulls": 25530,
-      "Oroberyl Spent": 12765000,
+      "Total Pulls": 25600,
+      "Oroberyl Spent": 12800000,
       "6-Star": {
-        "Rate": "1.990%",
-        "Count": 508,
-        "Median Pity": 28,
+        "Rate": "1.988%",
+        "Count": 509,
+        "Median Pity": 29,
         "Won": "48%"
       },
       "5-Star": {
-        "Rate": "11.661%",
-        "Count": 2977
+        "Rate": "11.676%",
+        "Count": 2989
       },
       "Total Obtained": 287,
-      "Featured 6-Star %": "1.990%",
+      "Featured 6-Star %": "1.988%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -108,21 +108,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
-      "Total Users": 663,
-      "Total Pulls": 30400,
+      "Total Users": 664,
+      "Total Pulls": 30470,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.158%",
-        "Count": 1568,
+        "Rate": "5.166%",
+        "Count": 1574,
         "Median Pity": 13,
         "Won": "17%"
       },
       "5-Star": {
-        "Rate": "17.128%",
-        "Count": 5207
+        "Rate": "17.132%",
+        "Count": 5220
       },
-      "Total Obtained": 485,
-      "Featured 6-Star %": "5.158%",
+      "Total Obtained": 486,
+      "Featured 6-Star %": "5.166%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
