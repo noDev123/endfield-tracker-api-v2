@@ -1,42 +1,42 @@
 {
   "Standard Headhunting": {
     "Total Users": 2284,
-    "Total Pulls": 247790,
-    "Oroberyl Spent": 123895000,
+    "Total Pulls": 247805,
+    "Oroberyl Spent": 123902500,
     "6-Star": {
-      "Rate": "1.565%",
-      "Count": 3879,
+      "Rate": "1.566%",
+      "Count": 3880,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
       "Rate": "13.337%",
-      "Count": 33047
+      "Count": 33049
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 374,
-      "Total Pulls": 28115,
-      "Oroberyl Spent": 14057500,
+      "Total Users": 375,
+      "Total Pulls": 28185,
+      "Oroberyl Spent": 14092500,
       "6-Star": {
-        "Rate": "1.970%",
-        "Count": 554,
+        "Rate": "1.969%",
+        "Count": 555,
         "Median Pity": 28,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.723%",
-        "Count": 3296
+        "Rate": "11.726%",
+        "Count": 3305
       },
       "Total Obtained": 314,
-      "Featured 6-Star %": "1.970%",
+      "Featured 6-Star %": "1.969%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
       "Total Users": 1201,
-      "Total Pulls": 78292,
-      "Oroberyl Spent": 39146000,
+      "Total Pulls": 78297,
+      "Oroberyl Spent": 39148500,
       "6-Star": {
         "Rate": "1.750%",
         "Count": 1370,
@@ -44,8 +44,8 @@
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "11.877%",
-        "Count": 9299
+        "Rate": "11.878%",
+        "Count": 9300
       },
       "Total Obtained": 811,
       "Featured 6-Star %": "1.750%",
@@ -109,20 +109,20 @@
     },
     "Graffiti Issue": {
       "Total Users": 682,
-      "Total Pulls": 31400,
+      "Total Pulls": 31420,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.153%",
-        "Count": 1618,
+        "Rate": "5.156%",
+        "Count": 1620,
         "Median Pity": 13,
         "Won": "17%"
       },
       "5-Star": {
-        "Rate": "17.137%",
-        "Count": 5381
+        "Rate": "17.139%",
+        "Count": 5385
       },
-      "Total Obtained": 503,
-      "Featured 6-Star %": "5.153%",
+      "Total Obtained": 504,
+      "Featured 6-Star %": "5.156%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
