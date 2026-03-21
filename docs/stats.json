@@ -1,202 +1,202 @@
 {
   "Standard Headhunting": {
-    "Total Users": 2285,
-    "Total Pulls": 247955,
-    "Oroberyl Spent": 123977500,
+    "Total Users": 2286,
+    "Total Pulls": 248084,
+    "Oroberyl Spent": 124042000,
     "6-Star": {
-      "Rate": "1.565%",
-      "Count": 3881,
+      "Rate": "1.566%",
+      "Count": 3884,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.339%",
-      "Count": 33075
+      "Rate": "13.337%",
+      "Count": 33088
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 377,
-      "Total Pulls": 28367,
-      "Oroberyl Spent": 14183500,
+      "Total Users": 378,
+      "Total Pulls": 28510,
+      "Oroberyl Spent": 14255000,
       "6-Star": {
-        "Rate": "1.967%",
-        "Count": 558,
+        "Rate": "1.968%",
+        "Count": 561,
         "Median Pity": 28,
-        "Won": "49%"
+        "Won": "48%"
       },
       "5-Star": {
-        "Rate": "11.728%",
-        "Count": 3327
+        "Rate": "11.722%",
+        "Count": 3342
       },
-      "Total Obtained": 315,
-      "Featured 6-Star %": "1.967%",
+      "Total Obtained": 316,
+      "Featured 6-Star %": "1.968%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
-      "Total Users": 1203,
-      "Total Pulls": 78468,
-      "Oroberyl Spent": 39234000,
+      "Total Users": 1204,
+      "Total Pulls": 78557,
+      "Oroberyl Spent": 39278500,
       "6-Star": {
         "Rate": "1.750%",
-        "Count": 1373,
+        "Count": 1375,
         "Median Pity": 25,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "11.876%",
-        "Count": 9319
+        "Rate": "11.874%",
+        "Count": 9328
       },
-      "Total Obtained": 813,
+      "Total Obtained": 815,
       "Featured 6-Star %": "1.750%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
-      "Total Users": 2224,
-      "Total Pulls": 181011,
-      "Oroberyl Spent": 90505500,
+      "Total Users": 2225,
+      "Total Pulls": 181095,
+      "Oroberyl Spent": 90547500,
       "6-Star": {
         "Rate": "1.854%",
-        "Count": 3356,
+        "Count": 3357,
         "Median Pity": 30,
         "Won": "50%"
       },
       "5-Star": {
         "Rate": "12.197%",
-        "Count": 22078
+        "Count": 22089
       },
       "Total Obtained": 30,
       "Featured 6-Star %": "1.854%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/gilberta.png"
     },
     "Scars Of The Forge": {
-      "Total Users": 2170,
-      "Total Pulls": 224682,
-      "Oroberyl Spent": 112341000,
+      "Total Users": 2171,
+      "Total Pulls": 224772,
+      "Oroberyl Spent": 112386000,
       "6-Star": {
-        "Rate": "1.722%",
-        "Count": 3870,
+        "Rate": "1.723%",
+        "Count": 3872,
         "Median Pity": 45,
         "Won": "52%"
       },
       "5-Star": {
-        "Rate": "12.404%",
-        "Count": 27869
+        "Rate": "12.403%",
+        "Count": 27878
       },
       "Total Obtained": 45,
-      "Featured 6-Star %": "1.722%",
+      "Featured 6-Star %": "1.723%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/laevatain.png"
     }
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 224,
-      "Total Pulls": 9700,
+      "Total Users": 225,
+      "Total Pulls": 9770,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.330%",
-        "Count": 517,
+        "Rate": "5.333%",
+        "Count": 521,
         "Median Pity": 12,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "17.000%",
-        "Count": 1649
+        "Rate": "16.991%",
+        "Count": 1660
       },
-      "Total Obtained": 161,
-      "Featured 6-Star %": "5.330%",
+      "Total Obtained": 162,
+      "Featured 6-Star %": "5.333%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
-      "Total Users": 683,
-      "Total Pulls": 31470,
+      "Total Users": 684,
+      "Total Pulls": 31510,
       "Oroberyl Spent": null,
       "6-Star": {
         "Rate": "5.157%",
-        "Count": 1623,
+        "Count": 1625,
         "Median Pity": 13,
         "Won": "17%"
       },
       "5-Star": {
-        "Rate": "17.127%",
-        "Count": 5390
+        "Rate": "17.122%",
+        "Count": 5395
       },
-      "Total Obtained": 505,
+      "Total Obtained": 506,
       "Featured 6-Star %": "5.157%",
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
-      "Total Users": 1430,
-      "Total Pulls": 66620,
+      "Total Users": 1431,
+      "Total Pulls": 66700,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.015%",
-        "Count": 3341,
+        "Rate": "5.019%",
+        "Count": 3348,
         "Median Pity": 14,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "17.095%",
-        "Count": 11389
+        "Rate": "17.096%",
+        "Count": 11403
       },
       "Total Obtained": 14,
-      "Featured 6-Star %": "5.015%",
+      "Featured 6-Star %": "5.019%",
       "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
-      "Total Users": 1820,
-      "Total Pulls": 123610,
+      "Total Users": 1821,
+      "Total Pulls": 123620,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.251%",
-        "Count": 6491,
+        "Rate": "5.252%",
+        "Count": 6492,
         "Median Pity": 14,
         "Won": "25%"
       },
       "5-Star": {
         "Rate": "17.195%",
-        "Count": 21255
+        "Count": 21256
       },
       "Total Obtained": 14,
-      "Featured 6-Star %": "5.251%",
+      "Featured 6-Star %": "5.252%",
       "Featured Image": "https://goyfield.moe/images/weapons/forgebornScathe.png"
     }
   },
   "Standard Weapon": {
     "Solid Ice Issue": {
-      "Total Users": 768,
-      "Total Pulls": 30960,
+      "Total Users": 769,
+      "Total Pulls": 31040,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.987%",
-        "Count": 1544,
+        "Rate": "4.984%",
+        "Count": 1547,
         "Median Pity": 13,
         "Won": "28%"
       },
       "5-Star": {
-        "Rate": "16.906%",
-        "Count": 5234
+        "Rate": "16.910%",
+        "Count": 5249
       },
-      "Total Obtained": 524,
-      "Featured 6-Star %": "4.987%",
+      "Total Obtained": 525,
+      "Featured 6-Star %": "4.984%",
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 2129,
-      "Total Pulls": 26835,
+      "Total Users": 2130,
+      "Total Pulls": 26845,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.192%",
+        "Rate": "4.191%",
         "Count": 1125,
         "Median Pity": 5,
         "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.680%",
-        "Count": 4476
+        "Rate": "16.688%",
+        "Count": 4480
       },
       "Total Obtained": 286,
-      "Featured 6-Star %": "4.192%",
+      "Featured 6-Star %": "4.191%",
       "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
