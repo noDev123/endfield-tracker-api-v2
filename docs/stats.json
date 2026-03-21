@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2285,
-    "Total Pulls": 247925,
-    "Oroberyl Spent": 123962500,
+    "Total Pulls": 247945,
+    "Oroberyl Spent": 123972500,
     "6-Star": {
       "Rate": "1.565%",
       "Count": 3881,
@@ -10,27 +10,27 @@
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.338%",
-      "Count": 33068
+      "Rate": "13.339%",
+      "Count": 33073
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 376,
-      "Total Pulls": 28315,
-      "Oroberyl Spent": 14157500,
+      "Total Pulls": 28355,
+      "Oroberyl Spent": 14177500,
       "6-Star": {
-        "Rate": "1.971%",
+        "Rate": "1.968%",
         "Count": 558,
         "Median Pity": 28,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.722%",
-        "Count": 3319
+        "Rate": "11.730%",
+        "Count": 3326
       },
       "Total Obtained": 315,
-      "Featured 6-Star %": "1.971%",
+      "Featured 6-Star %": "1.968%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -91,20 +91,20 @@
   "Event Weapon": {
     "Brigand's Calling": {
       "Total Users": 224,
-      "Total Pulls": 9690,
+      "Total Pulls": 9700,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.325%",
-        "Count": 516,
+        "Rate": "5.330%",
+        "Count": 517,
         "Median Pity": 12,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "17.007%",
-        "Count": 1648
+        "Rate": "17.000%",
+        "Count": 1649
       },
       "Total Obtained": 161,
-      "Featured 6-Star %": "5.325%",
+      "Featured 6-Star %": "5.330%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
@@ -182,21 +182,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 2128,
-      "Total Pulls": 26825,
+      "Total Users": 2129,
+      "Total Pulls": 26835,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.186%",
-        "Count": 1123,
+        "Rate": "4.192%",
+        "Count": 1125,
         "Median Pity": 5,
         "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.678%",
-        "Count": 4474
+        "Rate": "16.680%",
+        "Count": 4476
       },
       "Total Obtained": 286,
-      "Featured 6-Star %": "4.186%",
+      "Featured 6-Star %": "4.192%",
       "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
