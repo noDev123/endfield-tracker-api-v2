@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2295,
-    "Total Pulls": 249181,
-    "Oroberyl Spent": 124590500,
+    "Total Pulls": 249191,
+    "Oroberyl Spent": 124595500,
     "6-Star": {
       "Rate": "1.565%",
       "Count": 3900,
@@ -11,26 +11,26 @@
     },
     "5-Star": {
       "Rate": "13.340%",
-      "Count": 33241
+      "Count": 33242
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 389,
-      "Total Pulls": 29337,
-      "Oroberyl Spent": 14668500,
+      "Total Pulls": 29387,
+      "Oroberyl Spent": 14693500,
       "6-Star": {
-        "Rate": "1.957%",
-        "Count": 574,
+        "Rate": "1.960%",
+        "Count": 576,
         "Median Pity": 28,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.726%",
-        "Count": 3440
+        "Rate": "11.723%",
+        "Count": 3445
       },
-      "Total Obtained": 326,
-      "Featured 6-Star %": "1.957%",
+      "Total Obtained": 327,
+      "Featured 6-Star %": "1.960%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -91,20 +91,20 @@
   "Event Weapon": {
     "Brigand's Calling": {
       "Total Users": 230,
-      "Total Pulls": 10060,
+      "Total Pulls": 10080,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.268%",
+        "Rate": "5.258%",
         "Count": 530,
         "Median Pity": 12,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.958%",
-        "Count": 1706
+        "Rate": "16.954%",
+        "Count": 1709
       },
       "Total Obtained": 164,
-      "Featured 6-Star %": "5.268%",
+      "Featured 6-Star %": "5.258%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
