@@ -236,21 +236,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/mountainBearer.png"
     },
     "Thunderous Peal Issue": {
-      "Total Users": 190,
-      "Total Pulls": 6880,
+      "Total Users": 191,
+      "Total Pulls": 6920,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.549%",
-        "Count": 313,
+        "Rate": "4.538%",
+        "Count": 314,
         "Median Pity": 12,
         "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.395%",
-        "Count": 1128
+        "Rate": "16.445%",
+        "Count": 1138
       },
       "Total Obtained": 95,
-      "Featured 6-Star %": "4.549%",
+      "Featured 6-Star %": "4.538%",
       "Featured Image": "https://goyfield.moe/images/weapons/thunderberge.png"
     }
   }
