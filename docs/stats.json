@@ -1,36 +1,36 @@
 {
   "Standard Headhunting": {
-    "Total Users": 2301,
-    "Total Pulls": 249914,
-    "Oroberyl Spent": 124957000,
+    "Total Users": 2302,
+    "Total Pulls": 250022,
+    "Oroberyl Spent": 125011000,
     "6-Star": {
       "Rate": "1.565%",
-      "Count": 3911,
+      "Count": 3913,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
       "Rate": "13.342%",
-      "Count": 33343
+      "Count": 33357
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 395,
-      "Total Pulls": 29868,
-      "Oroberyl Spent": 14934000,
+      "Total Users": 396,
+      "Total Pulls": 30059,
+      "Oroberyl Spent": 15029500,
       "6-Star": {
-        "Rate": "1.962%",
-        "Count": 586,
+        "Rate": "1.959%",
+        "Count": 589,
         "Median Pity": 28,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.748%",
-        "Count": 3509
+        "Rate": "11.744%",
+        "Count": 3530
       },
-      "Total Obtained": 332,
-      "Featured 6-Star %": "1.962%",
+      "Total Obtained": 333,
+      "Featured 6-Star %": "1.959%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -90,21 +90,21 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 234,
-      "Total Pulls": 10300,
+      "Total Users": 235,
+      "Total Pulls": 10380,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.262%",
-        "Count": 542,
+        "Rate": "5.260%",
+        "Count": 546,
         "Median Pity": 12,
         "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.942%",
-        "Count": 1745
+        "Rate": "16.927%",
+        "Count": 1757
       },
-      "Total Obtained": 168,
-      "Featured 6-Star %": "5.262%",
+      "Total Obtained": 169,
+      "Featured 6-Star %": "5.260%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
@@ -126,21 +126,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
-      "Total Users": 1442,
-      "Total Pulls": 67150,
+      "Total Users": 1443,
+      "Total Pulls": 67170,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.019%",
+        "Rate": "5.017%",
         "Count": 3370,
         "Median Pity": 14,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "17.089%",
-        "Count": 11475
+        "Rate": "17.086%",
+        "Count": 11477
       },
       "Total Obtained": 14,
-      "Featured 6-Star %": "5.019%",
+      "Featured 6-Star %": "5.017%",
       "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
@@ -164,39 +164,39 @@
   },
   "Standard Weapon": {
     "Solid Ice Issue": {
-      "Total Users": 776,
-      "Total Pulls": 31250,
+      "Total Users": 777,
+      "Total Pulls": 31280,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.982%",
+        "Rate": "4.978%",
         "Count": 1557,
         "Median Pity": 13,
         "Won": "28%"
       },
       "5-Star": {
-        "Rate": "16.922%",
-        "Count": 5288
+        "Rate": "16.921%",
+        "Count": 5293
       },
       "Total Obtained": 529,
-      "Featured 6-Star %": "4.982%",
+      "Featured 6-Star %": "4.978%",
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 2144,
-      "Total Pulls": 27085,
+      "Total Users": 2145,
+      "Total Pulls": 27095,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.187%",
+        "Rate": "4.185%",
         "Count": 1134,
         "Median Pity": 5,
         "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.696%",
-        "Count": 4522
+        "Rate": "16.697%",
+        "Count": 4524
       },
       "Total Obtained": 288,
-      "Featured 6-Star %": "4.187%",
+      "Featured 6-Star %": "4.185%",
       "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
