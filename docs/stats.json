@@ -90,20 +90,20 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 232,
-      "Total Pulls": 10220,
+      "Total Users": 233,
+      "Total Pulls": 10240,
       "Oroberyl Spent": null,
       "6-Star": {
         "Rate": "5.254%",
-        "Count": 537,
+        "Count": 538,
         "Median Pity": 12,
-        "Won": "26%"
+        "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.977%",
-        "Count": 1735
+        "Rate": "16.963%",
+        "Count": 1737
       },
-      "Total Obtained": 166,
+      "Total Obtained": 167,
       "Featured 6-Star %": "5.254%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
