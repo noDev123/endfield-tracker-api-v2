@@ -1,17 +1,17 @@
 {
   "Standard Headhunting": {
     "Total Users": 2305,
-    "Total Pulls": 250345,
-    "Oroberyl Spent": 125172500,
+    "Total Pulls": 250355,
+    "Oroberyl Spent": 125177500,
     "6-Star": {
       "Rate": "1.565%",
-      "Count": 3917,
+      "Count": 3918,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.342%",
-      "Count": 33401
+      "Rate": "13.343%",
+      "Count": 33404
     }
   },
   "Special Headhunting": {
@@ -91,20 +91,20 @@
   "Event Weapon": {
     "Brigand's Calling": {
       "Total Users": 237,
-      "Total Pulls": 10490,
+      "Total Pulls": 10500,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.281%",
-        "Count": 554,
+        "Rate": "5.286%",
+        "Count": 555,
         "Median Pity": 12,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "16.873%",
-        "Count": 1770
+        "Rate": "16.867%",
+        "Count": 1771
       },
-      "Total Obtained": 170,
-      "Featured 6-Star %": "5.281%",
+      "Total Obtained": 171,
+      "Featured 6-Star %": "5.286%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
