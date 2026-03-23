@@ -1,36 +1,36 @@
 {
   "Standard Headhunting": {
-    "Total Users": 2303,
-    "Total Pulls": 250150,
-    "Oroberyl Spent": 125075000,
+    "Total Users": 2304,
+    "Total Pulls": 250245,
+    "Oroberyl Spent": 125122500,
     "6-Star": {
-      "Rate": "1.565%",
-      "Count": 3914,
+      "Rate": "1.564%",
+      "Count": 3915,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.342%",
-      "Count": 33376
+      "Rate": "13.343%",
+      "Count": 33389
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 397,
-      "Total Pulls": 30141,
-      "Oroberyl Spent": 15070500,
+      "Total Users": 398,
+      "Total Pulls": 30212,
+      "Oroberyl Spent": 15106000,
       "6-Star": {
-        "Rate": "1.957%",
-        "Count": 590,
-        "Median Pity": 28,
+        "Rate": "1.956%",
+        "Count": 591,
+        "Median Pity": 29,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.745%",
-        "Count": 3540
+        "Rate": "11.740%",
+        "Count": 3547
       },
-      "Total Obtained": 334,
-      "Featured 6-Star %": "1.957%",
+      "Total Obtained": 335,
+      "Featured 6-Star %": "1.956%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -90,21 +90,21 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 236,
-      "Total Pulls": 10450,
+      "Total Users": 237,
+      "Total Pulls": 10490,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.263%",
-        "Count": 550,
+        "Rate": "5.281%",
+        "Count": 554,
         "Median Pity": 12,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "16.909%",
-        "Count": 1767
+        "Rate": "16.873%",
+        "Count": 1770
       },
-      "Total Obtained": 169,
-      "Featured 6-Star %": "5.263%",
+      "Total Obtained": 170,
+      "Featured 6-Star %": "5.281%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
