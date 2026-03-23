@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2305,
-    "Total Pulls": 250390,
-    "Oroberyl Spent": 125195000,
+    "Total Pulls": 250410,
+    "Oroberyl Spent": 125205000,
     "6-Star": {
       "Rate": "1.565%",
       "Count": 3918,
@@ -11,25 +11,25 @@
     },
     "5-Star": {
       "Rate": "13.343%",
-      "Count": 33410
+      "Count": 33413
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 400,
-      "Total Pulls": 30384,
-      "Oroberyl Spent": 15192000,
+      "Total Users": 401,
+      "Total Pulls": 30482,
+      "Oroberyl Spent": 15241000,
       "6-Star": {
         "Rate": "1.955%",
-        "Count": 594,
+        "Count": 596,
         "Median Pity": 29,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.736%",
-        "Count": 3566
+        "Rate": "11.741%",
+        "Count": 3579
       },
-      "Total Obtained": 336,
+      "Total Obtained": 338,
       "Featured 6-Star %": "1.955%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
@@ -90,21 +90,21 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 238,
-      "Total Pulls": 10570,
+      "Total Users": 239,
+      "Total Pulls": 10580,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.279%",
-        "Count": 558,
+        "Rate": "5.284%",
+        "Count": 559,
         "Median Pity": 12,
-        "Won": "26%"
+        "Won": "27%"
       },
       "5-Star": {
-        "Rate": "16.840%",
-        "Count": 1780
+        "Rate": "16.834%",
+        "Count": 1781
       },
-      "Total Obtained": 172,
-      "Featured 6-Star %": "5.279%",
+      "Total Obtained": 173,
+      "Featured 6-Star %": "5.284%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
@@ -126,21 +126,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/artzyTyrannical.png"
     },
     "Express Delivery Issue": {
-      "Total Users": 1445,
-      "Total Pulls": 67240,
+      "Total Users": 1446,
+      "Total Pulls": 67320,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.021%",
-        "Count": 3376,
+        "Rate": "5.018%",
+        "Count": 3378,
         "Median Pity": 14,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "17.085%",
-        "Count": 11488
+        "Rate": "17.086%",
+        "Count": 11502
       },
       "Total Obtained": 14,
-      "Featured 6-Star %": "5.021%",
+      "Featured 6-Star %": "5.018%",
       "Featured Image": "https://goyfield.moe/images/weapons/deliveryGuaranteed.png"
     },
     "Smelting Forge Issue": {
