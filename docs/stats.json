@@ -17,8 +17,8 @@
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 407,
-      "Total Pulls": 31029,
-      "Oroberyl Spent": 15514500,
+      "Total Pulls": 31034,
+      "Oroberyl Spent": 15517000,
       "6-Star": {
         "Rate": "1.959%",
         "Count": 608,
@@ -26,7 +26,7 @@
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.721%",
+        "Rate": "11.719%",
         "Count": 3637
       },
       "Total Obtained": 347,
@@ -237,20 +237,20 @@
     },
     "Thunderous Peal Issue": {
       "Total Users": 191,
-      "Total Pulls": 6920,
+      "Total Pulls": 6930,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.538%",
+        "Rate": "4.531%",
         "Count": 314,
         "Median Pity": 12,
         "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.445%",
-        "Count": 1138
+        "Rate": "16.436%",
+        "Count": 1139
       },
       "Total Obtained": 95,
-      "Featured 6-Star %": "4.538%",
+      "Featured 6-Star %": "4.531%",
       "Featured Image": "https://goyfield.moe/images/weapons/thunderberge.png"
     }
   }
