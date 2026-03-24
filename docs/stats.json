@@ -1,8 +1,8 @@
 {
   "Standard Headhunting": {
     "Total Users": 2311,
-    "Total Pulls": 251202,
-    "Oroberyl Spent": 125601000,
+    "Total Pulls": 251212,
+    "Oroberyl Spent": 125606000,
     "6-Star": {
       "Rate": "1.565%",
       "Count": 3932,
@@ -11,26 +11,26 @@
     },
     "5-Star": {
       "Rate": "13.345%",
-      "Count": 33523
+      "Count": 33525
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
       "Total Users": 407,
-      "Total Pulls": 31051,
-      "Oroberyl Spent": 15525500,
+      "Total Pulls": 31064,
+      "Oroberyl Spent": 15532000,
       "6-Star": {
-        "Rate": "1.958%",
-        "Count": 608,
+        "Rate": "1.960%",
+        "Count": 609,
         "Median Pity": 29,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.716%",
-        "Count": 3638
+        "Rate": "11.715%",
+        "Count": 3639
       },
       "Total Obtained": 347,
-      "Featured 6-Star %": "1.958%",
+      "Featured 6-Star %": "1.960%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
@@ -182,21 +182,21 @@
       "Featured Image": "https://goyfield.moe/images/weapons/khravengger.png"
     },
     "Cosmic Voice Issue": {
-      "Total Users": 2153,
-      "Total Pulls": 27195,
+      "Total Users": 2154,
+      "Total Pulls": 27205,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "4.177%",
-        "Count": 1136,
+        "Rate": "4.179%",
+        "Count": 1137,
         "Median Pity": 5,
         "Won": "24%"
       },
       "5-Star": {
-        "Rate": "16.687%",
+        "Rate": "16.681%",
         "Count": 4538
       },
       "Total Obtained": 289,
-      "Featured 6-Star %": "4.177%",
+      "Featured 6-Star %": "4.179%",
       "Featured Image": "https://goyfield.moe/images/weapons/dreamsOfTheStarryBeach.png"
     },
     "Far Expedition Issue": {
