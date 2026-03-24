@@ -1,54 +1,54 @@
 {
   "Standard Headhunting": {
     "Total Users": 2318,
-    "Total Pulls": 252114,
-    "Oroberyl Spent": 126057000,
+    "Total Pulls": 252152,
+    "Oroberyl Spent": 126076000,
     "6-Star": {
       "Rate": "1.566%",
-      "Count": 3948,
+      "Count": 3949,
       "Median Pity": 59,
       "Won": null
     },
     "5-Star": {
-      "Rate": "13.345%",
-      "Count": 33645
+      "Rate": "13.346%",
+      "Count": 33651
     }
   },
   "Special Headhunting": {
     "River's Daughter": {
-      "Total Users": 415,
-      "Total Pulls": 31722,
-      "Oroberyl Spent": 15861000,
+      "Total Users": 416,
+      "Total Pulls": 31823,
+      "Oroberyl Spent": 15911500,
       "6-Star": {
-        "Rate": "1.964%",
-        "Count": 623,
+        "Rate": "1.967%",
+        "Count": 626,
         "Median Pity": 29,
         "Won": "49%"
       },
       "5-Star": {
-        "Rate": "11.733%",
-        "Count": 3722
+        "Rate": "11.721%",
+        "Count": 3730
       },
-      "Total Obtained": 356,
-      "Featured 6-Star %": "1.964%",
+      "Total Obtained": 358,
+      "Featured 6-Star %": "1.967%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/tangtang.png"
     },
     "Hues Of Passion": {
       "Total Users": 1234,
-      "Total Pulls": 80306,
-      "Oroberyl Spent": 40153000,
+      "Total Pulls": 80330,
+      "Oroberyl Spent": 40165000,
       "6-Star": {
-        "Rate": "1.746%",
+        "Rate": "1.745%",
         "Count": 1402,
         "Median Pity": 25,
         "Won": "52%"
       },
       "5-Star": {
         "Rate": "11.875%",
-        "Count": 9536
+        "Count": 9539
       },
       "Total Obtained": 831,
-      "Featured 6-Star %": "1.746%",
+      "Featured 6-Star %": "1.745%",
       "Featured Image": "https://goyfield.moe/images/operators/preview/yvonne.png"
     },
     "The Floaty Messenger": {
@@ -90,21 +90,21 @@
   },
   "Event Weapon": {
     "Brigand's Calling": {
-      "Total Users": 248,
-      "Total Pulls": 10940,
+      "Total Users": 250,
+      "Total Pulls": 10990,
       "Oroberyl Spent": null,
       "6-Star": {
-        "Rate": "5.265%",
-        "Count": 576,
+        "Rate": "5.259%",
+        "Count": 578,
         "Median Pity": 12,
         "Won": "26%"
       },
       "5-Star": {
-        "Rate": "16.837%",
-        "Count": 1842
+        "Rate": "16.861%",
+        "Count": 1853
       },
-      "Total Obtained": 176,
-      "Featured 6-Star %": "5.265%",
+      "Total Obtained": 177,
+      "Featured 6-Star %": "5.259%",
       "Featured Image": "https://goyfield.moe/images/weapons/brigandsCalling.png"
     },
     "Graffiti Issue": {
