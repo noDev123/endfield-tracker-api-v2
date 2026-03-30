@@ -3,6 +3,14 @@ import json
 import os
 
 BANNER_TYPES = ["Special Headhunting", "Standard Headhunting", "Event Weapon", "Standard Weapon"]
+SCREENSHOT_DIR = "debug_screenshots"
+
+
+def save_screenshot(page, name):
+    os.makedirs(SCREENSHOT_DIR, exist_ok=True)
+    path = os.path.join(SCREENSHOT_DIR, f"{name}.png")
+    page.screenshot(path=path, full_page=True)
+    print(f"  [screenshot] {path}")
 
 
 def get_stats(page):
@@ -147,51 +155,99 @@ def build_entry(raw, include_obtained=False):
     return entry
 
 
+def js_click_by_text(page, target: str) -> bool:
+    """
+    Use JavaScript to find and click any visible element whose trimmed
+    innerText exactly matches `target`. Works regardless of element type
+    (div, button, li, span, etc.) — no Playwright locator assumptions needed.
+    """
+    return page.evaluate("""(target) => {
+        const all = document.querySelectorAll('*');
+        for (const el of all) {
+            if (el.children.length > 0) continue;  // leaf nodes only
+            const text = (el.innerText || '').trim();
+            if (text === target) {
+                el.click();
+                return true;
+            }
+        }
+        // Second pass: allow parent elements (e.g. button wrapping a span)
+        for (const el of all) {
+            const text = (el.innerText || '').trim();
+            if (text === target) {
+                el.click();
+                return true;
+            }
+        }
+        return false;
+    }""", target)
+
+
+def dump_visible_texts(page):
+    """Print all unique short leaf-node texts — helps diagnose what's on screen."""
+    texts = page.evaluate("""() => {
+        const seen = new Set();
+        for (const el of document.querySelectorAll('*')) {
+            if (el.children.length > 0) continue;
+            const t = (el.innerText || '').trim();
+            if (t && t.length < 60) seen.add(t);
+        }
+        return [...seen].slice(0, 80);
+    }""")
+    print("  [DOM texts]", texts)
+
+
 def get_type_selector(page):
-    """
-    Find the banner-type selector button by matching its text against the known
-    list of banner types. Precise — won't accidentally grab nav or other buttons.
-    """
+    """Find the banner-type selector button by matching known type names."""
     for t in BANNER_TYPES:
         btn = page.locator(f'button:has-text("{t}")').first
         if btn.is_visible():
-            return btn
+            return btn, t
     raise RuntimeError("Could not find the banner-type selector button")
 
 
 def switch_banner_type(page, target: str):
     """
-    Open the type dropdown and click `target`. Retries up to 3 times.
-    The page loads on 'Special Headhunting' by default, but we detect
-    the current type dynamically so this is safe to call in any order.
+    Switch to a banner type tab. Strategy:
+      1. Find which type is currently shown and click its button to open the picker.
+      2. Wait 3s for the picker to render.
+      3. Use JS to click any element whose text exactly matches `target`
+         (avoids assumptions about li/div/button element type).
+      4. Verify the switch worked; retry up to 3 times.
     """
     for attempt in range(3):
-        try:
-            btn = get_type_selector(page)
-            current = btn.inner_text().strip()
-            if current == target:
-                print(f"  Already on: {target}")
-                return
-            btn.click()
-            # Wait for the dropdown list item to be visible before clicking
-            item = page.locator('li').filter(has_text=target).first
-            item.wait_for(state="visible", timeout=10000)
-            item.click()
-            page.wait_for_timeout(3000)
-            print(f"  Switched to: {target}")
+        btn, current = get_type_selector(page)
+        if current == target:
+            print(f"  Already on: {target}")
             return
-        except PWTimeout:
-            print(f"  Attempt {attempt + 1} timed out switching to '{target}', retrying…")
+
+        print(f"  Opening picker (current='{current}', want='{target}')…")
+        btn.click()
+        page.wait_for_timeout(3000)  # give the picker time to render
+
+        save_screenshot(page, f"picker_open_attempt{attempt+1}_{target.replace(' ','_')}")
+        dump_visible_texts(page)
+
+        clicked = js_click_by_text(page, target)
+        if clicked:
+            page.wait_for_timeout(3000)
+            # Verify the switch actually happened
+            _, new_current = get_type_selector(page)
+            if new_current == target:
+                print(f"  Switched to: {target}")
+                return
+            print(f"  Click landed but still on '{new_current}', retrying…")
+        else:
+            print(f"  js_click_by_text could not find '{target}' in DOM, retrying…")
             page.wait_for_timeout(2000)
+
+    save_screenshot(page, f"switch_failed_{target.replace(' ','_')}")
     raise RuntimeError(f"Could not switch to banner type '{target}' after 3 attempts")
 
 
 def get_sub_banner_trigger(page):
     """
-    The sub-banner selector is a button that:
-      - contains an <img> (the banner mini-icon)
-      - whose text is NOT one of the four known banner type names
-    This distinguishes it cleanly from the type selector button.
+    Sub-banner selector: a button with an <img> whose text isn't a banner type name.
     """
     for btn in page.locator('button').filter(has=page.locator('img')).all():
         text = btn.inner_text().strip()
@@ -201,7 +257,7 @@ def get_sub_banner_trigger(page):
 
 
 def scrape_sub_banners(page, trigger):
-    """Scrape all sub-banners from a dropdown trigger. Returns dict of {name: data}."""
+    """Scrape all sub-banners from a dropdown trigger."""
     result = {}
 
     default_banner = trigger.inner_text().strip()
@@ -213,21 +269,41 @@ def scrape_sub_banners(page, trigger):
     page.wait_for_timeout(2000)
 
     other_banners = []
-    for li in page.locator('li').all():
+    # Try li first, fall back to any visible short-text elements in a popup
+    lis = page.locator('li').all()
+    candidates = lis if lis else []
+    for li in candidates:
         name = li.inner_text().strip()
         if name and len(name) > 1 and name != default_banner:
             other_banners.append(name)
+
+    # Fallback: JS scan for new popup items
+    if not other_banners:
+        other_banners = page.evaluate(f"""(defaultBanner) => {{
+            const names = [];
+            for (const el of document.querySelectorAll('li, [role="option"], [role="menuitem"]')) {{
+                const t = (el.innerText || '').trim();
+                if (t && t.length > 1 && t !== defaultBanner) names.push(t);
+            }}
+            return [...new Set(names)];
+        }}""", default_banner)
+
     print(f"  Other sub-banners: {other_banners}")
 
     for name in other_banners:
         try:
+            # Re-open dropdown if closed
             if not page.locator('li').first.is_visible():
                 trigger.click()
                 page.wait_for_timeout(2000)
-            for li in page.locator('li').all():
-                if name in li.inner_text():
-                    li.click()
-                    break
+
+            clicked = js_click_by_text(page, name)
+            if not clicked:
+                # fallback: find li containing the name
+                for li in page.locator('li').all():
+                    if name in li.inner_text():
+                        li.click()
+                        break
             page.wait_for_timeout(3000)
             result[name] = build_entry(get_stats(page), include_obtained=True)
             print(f"    {name} done")
@@ -247,6 +323,7 @@ def scrape():
         page = browser.new_page()
         page.goto("https://goyfield.moe/records/global", wait_until="networkidle", timeout=60000)
         page.wait_for_timeout(8000)
+        save_screenshot(page, "00_page_loaded")
 
         result = {}
 
