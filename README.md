@@ -4,7 +4,7 @@ Welcome to **GEGP API**. The one and only Global Stats API in Arknights: Endfiel
 
 
 [![Made by](https://img.shields.io/badge/Made%20by-noDev123-blue)](https://github.com/noDev123)
-![Version](https://img.shields.io/badge/Version-1.0.1-blue)
+![Version](https://img.shields.io/badge/Version-1.2.1-blue)
 
 ## What is Goyfield❓
 
