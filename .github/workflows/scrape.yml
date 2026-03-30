@@ -5,13 +5,15 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main        # always pull the latest main, not a cached ref
+          ref: main
       - name: Show current commit
         run: git log -1 --oneline
       - name: Set up Python
