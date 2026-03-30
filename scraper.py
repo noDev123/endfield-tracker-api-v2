@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 import json
 import os
 import time
@@ -40,13 +40,9 @@ def get_stats(page):
         }
         const six=getStarSection(6), five=getStarSection(5);
 
-        // Featured character/weapon image - find img in the character card area
-        // The card is the small box top-left with name + TOTAL OBTAINED
         let featured_img = null;
         const allImgs = Array.from(document.querySelectorAll('img'));
-        // Log all img srcs for debugging
         const allSrcs = allImgs.map(i => i.getAttribute('src')).filter(s => s && !s.includes('miniIcon') && !s.includes('icon') && !s.includes('currencies') && !s.includes('banner'));
-        // Try known operator path first
         for (const img of allImgs) {
             const src = img.getAttribute('src') || '';
             if (src.includes('/operators/preview/') || src.includes('/images/weapons/')) {
@@ -54,7 +50,6 @@ def get_stats(page):
                 break;
             }
         }
-        // Fallback: find img that's inside the character card (near TOTAL OBTAINED text)
         if (!featured_img) {
             for (const el of document.querySelectorAll('*')) {
                 if (el.innerText && el.innerText.trim() === 'TOTAL OBTAINED') {
@@ -64,25 +59,18 @@ def get_stats(page):
                 }
             }
         }
-        // Last resort: any img whose src has a path depth suggesting it's a preview image
         if (!featured_img && allSrcs.length > 0) {
             const candidate = allSrcs.find(s => s.split('/').length >= 4);
             if (candidate) featured_img = 'https://goyfield.moe' + candidate;
         }
 
-        // Total Obtained: number shown in the featured character card
-        // Try "TOTAL OBTAINED" label first, then any number near character name
         let total_obtained = null;
-
-        // Strategy 1: find "TOTAL OBTAINED" label and grab nearby number
         for (const el of document.querySelectorAll('*')) {
             if (el.children.length === 0 && getText(el).includes('TOTAL OBTAINED')) {
                 const parent = el.parentElement;
                 const gp = parent.parentElement;
-                // Check siblings
                 for (const s of parent.children)
                     if (s !== el && getText(s).match(/^[0-9 ]+$/)) { total_obtained = getText(s).replace(/ /g,''); break; }
-                // Check parent siblings
                 if (!total_obtained) {
                     for (const c of gp.children)
                         if (c !== parent && getText(c).match(/^[0-9 ]+$/)) { total_obtained = getText(c).replace(/ /g,''); break; }
@@ -90,11 +78,7 @@ def get_stats(page):
                 break;
             }
         }
-
-        // Strategy 2: find any standalone number in the character card area
-        // The card usually has: [img] [name] [TOTAL OBTAINED] [number]
         if (!total_obtained) {
-            // Look for a div/section that has both a name-like text and a number
             const cards = [...document.querySelectorAll('div, section')].filter(el => {
                 const t = el.innerText || '';
                 return t.includes('TOTAL') || t.includes('Total Obtained') || t.includes('obtained');
@@ -111,7 +95,6 @@ def get_stats(page):
             }
         }
 
-        // Featured character % = first % value in the 6-star list table
         let featured_pct = null;
         for (const el of document.querySelectorAll('*')) {
             if (el.children.length === 0) {
@@ -165,6 +148,31 @@ def build_entry(raw, include_obtained=False):
     return entry
 
 
+def switch_banner_type(page, target: str, timeout=15000):
+    """
+    Click the banner-type tab/button for `target`.
+    Tries up to 3 times in case the dropdown closes before the click lands.
+    """
+    for attempt in range(3):
+        try:
+            # Find any visible button that currently acts as the type selector
+            # (the one whose dropdown contains our target).
+            # Open whatever selector is currently shown.
+            selector_btn = page.locator('button').filter(has_not=page.locator('img')).first
+            selector_btn.click(timeout=5000)
+            # Wait for the list item to appear
+            item = page.get_by_text(target, exact=True)
+            item.wait_for(state="visible", timeout=timeout)
+            item.click()
+            page.wait_for_timeout(3000)
+            print(f"  Switched to: {target}")
+            return
+        except PWTimeout:
+            print(f"  switch_banner_type attempt {attempt+1} timed out, retrying…")
+            page.wait_for_timeout(2000)
+    raise RuntimeError(f"Could not switch to banner type '{target}' after 3 attempts")
+
+
 def get_banner_trigger(page, exclude_text='Headhunting'):
     """Get the banner dropdown trigger button (has img, not the type selector)."""
     return page.locator('button').filter(has=page.locator('img')).filter(has_not_text=exclude_text).first
@@ -192,7 +200,6 @@ def scrape_sub_banners(page, trigger):
 
     print(f"  Others: {other_banners}")
 
-    # Click each and scrape
     for name in other_banners:
         try:
             if not page.locator('li').first.is_visible():
@@ -214,8 +221,10 @@ def scrape_sub_banners(page, trigger):
 
 def scrape():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True,
-            args=['--no-sandbox','--disable-setuid-sandbox','--disable-dev-shm-usage'])
+        browser = p.chromium.launch(
+            headless=True,
+            args=['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
+        )
         page = browser.new_page()
         page.goto("https://goyfield.moe/records/global", wait_until="networkidle", timeout=60000)
         page.wait_for_timeout(8000)
@@ -223,36 +232,24 @@ def scrape():
         result = {}
 
         # ── Standard Headhunting ─────────────────────────────────────────────
-        page.locator('button:has-text("Special Headhunting")').first.click()
-        page.wait_for_timeout(1000)
-        page.get_by_text("Standard Headhunting", exact=True).click()
-        page.wait_for_timeout(3000)
+        switch_banner_type(page, "Standard Headhunting")
         result["Standard Headhunting"] = build_entry(get_stats(page))
         print("Standard Headhunting done")
 
         # ── Special Headhunting ──────────────────────────────────────────────
-        page.locator('button:has-text("Standard Headhunting")').first.click()
-        page.wait_for_timeout(1000)
-        page.get_by_text("Special Headhunting", exact=True).click()
-        page.wait_for_timeout(3000)
+        switch_banner_type(page, "Special Headhunting")
         print("Scraping Special Headhunting...")
         trigger = get_banner_trigger(page, exclude_text='Headhunting')
         result["Special Headhunting"] = scrape_sub_banners(page, trigger)
 
         # ── Event Weapon ─────────────────────────────────────────────────────
-        page.locator('button:has-text("Special Headhunting")').first.click()
-        page.wait_for_timeout(1000)
-        page.get_by_text("Event Weapon", exact=True).click()
-        page.wait_for_timeout(3000)
+        switch_banner_type(page, "Event Weapon")
         print("Scraping Event Weapon...")
         trigger_weapon = get_banner_trigger(page, exclude_text='Event Weapon')
         result["Event Weapon"] = scrape_sub_banners(page, trigger_weapon)
 
         # ── Standard Weapon ──────────────────────────────────────────────────
-        page.locator('button:has-text("Event Weapon")').first.click()
-        page.wait_for_timeout(1000)
-        page.get_by_text("Standard Weapon", exact=True).click()
-        page.wait_for_timeout(3000)
+        switch_banner_type(page, "Standard Weapon")
         print("Scraping Standard Weapon...")
         trigger_std_weapon = get_banner_trigger(page, exclude_text='Standard Weapon')
         result["Standard Weapon"] = scrape_sub_banners(page, trigger_std_weapon)
