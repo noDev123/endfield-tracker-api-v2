@@ -1,7 +1,8 @@
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 import json
 import os
-import time
+
+BANNER_TYPES = ["Special Headhunting", "Standard Headhunting", "Event Weapon", "Standard Weapon"]
 
 
 def get_stats(page):
@@ -42,7 +43,6 @@ def get_stats(page):
 
         let featured_img = null;
         const allImgs = Array.from(document.querySelectorAll('img'));
-        const allSrcs = allImgs.map(i => i.getAttribute('src')).filter(s => s && !s.includes('miniIcon') && !s.includes('icon') && !s.includes('currencies') && !s.includes('banner'));
         for (const img of allImgs) {
             const src = img.getAttribute('src') || '';
             if (src.includes('/operators/preview/') || src.includes('/images/weapons/')) {
@@ -59,7 +59,10 @@ def get_stats(page):
                 }
             }
         }
-        if (!featured_img && allSrcs.length > 0) {
+        if (!featured_img) {
+            const allSrcs = allImgs.map(i => i.getAttribute('src')).filter(s => s
+                && !s.includes('miniIcon') && !s.includes('icon')
+                && !s.includes('currencies') && !s.includes('banner'));
             const candidate = allSrcs.find(s => s.split('/').length >= 4);
             if (candidate) featured_img = 'https://goyfield.moe' + candidate;
         }
@@ -99,10 +102,7 @@ def get_stats(page):
         for (const el of document.querySelectorAll('*')) {
             if (el.children.length === 0) {
                 const t = getText(el);
-                if (t.match(/^[0-9]+[.][0-9]+%$/) && !featured_pct) {
-                    featured_pct = t;
-                    break;
-                }
+                if (t.match(/^[0-9]+[.][0-9]+%$/) && !featured_pct) { featured_pct = t; break; }
             }
         }
 
@@ -113,8 +113,7 @@ def get_stats(page):
             total_obtained,
             rate6:six.rate, count6:six.count, pity6:six.pity, won6:six.won,
             rate5:five.rate, count5:five.count,
-            featured_pct,
-            featured_img,
+            featured_pct, featured_img,
         };
     }""")
 
@@ -148,47 +147,68 @@ def build_entry(raw, include_obtained=False):
     return entry
 
 
-def switch_banner_type(page, target: str, timeout=15000):
+def get_type_selector(page):
     """
-    Click the banner-type tab/button for `target`.
-    Tries up to 3 times in case the dropdown closes before the click lands.
+    Find the banner-type selector button by matching its text against the known
+    list of banner types. Precise — won't accidentally grab nav or other buttons.
+    """
+    for t in BANNER_TYPES:
+        btn = page.locator(f'button:has-text("{t}")').first
+        if btn.is_visible():
+            return btn
+    raise RuntimeError("Could not find the banner-type selector button")
+
+
+def switch_banner_type(page, target: str):
+    """
+    Open the type dropdown and click `target`. Retries up to 3 times.
+    The page loads on 'Special Headhunting' by default, but we detect
+    the current type dynamically so this is safe to call in any order.
     """
     for attempt in range(3):
         try:
-            # Find any visible button that currently acts as the type selector
-            # (the one whose dropdown contains our target).
-            # Open whatever selector is currently shown.
-            selector_btn = page.locator('button').filter(has_not=page.locator('img')).first
-            selector_btn.click(timeout=5000)
-            # Wait for the list item to appear
-            item = page.get_by_text(target, exact=True)
-            item.wait_for(state="visible", timeout=timeout)
+            btn = get_type_selector(page)
+            current = btn.inner_text().strip()
+            if current == target:
+                print(f"  Already on: {target}")
+                return
+            btn.click()
+            # Wait for the dropdown list item to be visible before clicking
+            item = page.locator('li').filter(has_text=target).first
+            item.wait_for(state="visible", timeout=10000)
             item.click()
             page.wait_for_timeout(3000)
             print(f"  Switched to: {target}")
             return
         except PWTimeout:
-            print(f"  switch_banner_type attempt {attempt+1} timed out, retrying…")
+            print(f"  Attempt {attempt + 1} timed out switching to '{target}', retrying…")
             page.wait_for_timeout(2000)
     raise RuntimeError(f"Could not switch to banner type '{target}' after 3 attempts")
 
 
-def get_banner_trigger(page, exclude_text='Headhunting'):
-    """Get the banner dropdown trigger button (has img, not the type selector)."""
-    return page.locator('button').filter(has=page.locator('img')).filter(has_not_text=exclude_text).first
+def get_sub_banner_trigger(page):
+    """
+    The sub-banner selector is a button that:
+      - contains an <img> (the banner mini-icon)
+      - whose text is NOT one of the four known banner type names
+    This distinguishes it cleanly from the type selector button.
+    """
+    for btn in page.locator('button').filter(has=page.locator('img')).all():
+        text = btn.inner_text().strip()
+        if not any(t in text for t in BANNER_TYPES):
+            return btn
+    raise RuntimeError("Could not find sub-banner trigger button")
 
 
 def scrape_sub_banners(page, trigger):
-    """Generic: scrape all sub-banners from a dropdown trigger. Returns dict of {name: data}."""
+    """Scrape all sub-banners from a dropdown trigger. Returns dict of {name: data}."""
     result = {}
 
-    # Scrape the default (already selected) banner first without clicking
     default_banner = trigger.inner_text().strip()
-    print(f"  Default: {default_banner}")
+    print(f"  Default sub-banner: {default_banner}")
     result[default_banner] = build_entry(get_stats(page), include_obtained=True)
     print(f"    done")
 
-    # Open dropdown and get other banner names
     trigger.click()
     page.wait_for_timeout(2000)
 
@@ -197,8 +217,7 @@ def scrape_sub_banners(page, trigger):
         name = li.inner_text().strip()
         if name and len(name) > 1 and name != default_banner:
             other_banners.append(name)
-
-    print(f"  Others: {other_banners}")
+    print(f"  Other sub-banners: {other_banners}")
 
     for name in other_banners:
         try:
@@ -239,20 +258,17 @@ def scrape():
         # ── Special Headhunting ──────────────────────────────────────────────
         switch_banner_type(page, "Special Headhunting")
         print("Scraping Special Headhunting...")
-        trigger = get_banner_trigger(page, exclude_text='Headhunting')
-        result["Special Headhunting"] = scrape_sub_banners(page, trigger)
+        result["Special Headhunting"] = scrape_sub_banners(page, get_sub_banner_trigger(page))
 
         # ── Event Weapon ─────────────────────────────────────────────────────
         switch_banner_type(page, "Event Weapon")
         print("Scraping Event Weapon...")
-        trigger_weapon = get_banner_trigger(page, exclude_text='Event Weapon')
-        result["Event Weapon"] = scrape_sub_banners(page, trigger_weapon)
+        result["Event Weapon"] = scrape_sub_banners(page, get_sub_banner_trigger(page))
 
         # ── Standard Weapon ──────────────────────────────────────────────────
         switch_banner_type(page, "Standard Weapon")
         print("Scraping Standard Weapon...")
-        trigger_std_weapon = get_banner_trigger(page, exclude_text='Standard Weapon')
-        result["Standard Weapon"] = scrape_sub_banners(page, trigger_std_weapon)
+        result["Standard Weapon"] = scrape_sub_banners(page, get_sub_banner_trigger(page))
 
         browser.close()
 
