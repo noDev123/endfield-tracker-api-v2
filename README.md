@@ -1,6 +1,6 @@
-# Endfield Global Pulls API ⚡
+# [GOYFIELD] Endfield Global Pulls API ⚡
 
-Welcome to **EGP API**. The one and only Global Stats API in Arknights: Endfield. EGP API makes it simple to get the data you need. It provides ~~promo codes~~, **global stats**, and **pull data**, and most of the informations are heavily fetched from Goyfield.
+Welcome to **GEGP API**. The one and only Global Stats API in Arknights: Endfield. EGP API makes it simple to get the data you need. It provides ~~promo codes~~, **global stats**, and **pull data**, and most of the informations are heavily fetched from Goyfield.
 
 
 [![Made by](https://img.shields.io/badge/Made%20by-noDev123-blue)](https://github.com/noDev123)
